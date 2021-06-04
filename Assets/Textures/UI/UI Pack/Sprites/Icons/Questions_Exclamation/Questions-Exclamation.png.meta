@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 930fe60ca7a70a646a15eccdcfa1faaa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7780588943197853727
+    second: Questions-Exclamation_0
+  - first:
+      213: -6760599487718947416
+    second: Questions-Exclamation_1
+  - first:
+      213: -7654922012029152002
+    second: Questions-Exclamation_2
+  - first:
+      213: -1277780734296741443
+    second: Questions-Exclamation_3
+  - first:
+      213: 1500625493707380361
+    second: Questions-Exclamation_4
+  - first:
+      213: -1339482792963101378
+    second: Questions-Exclamation_5
+  - first:
+      213: -2207033270800635829
+    second: Questions-Exclamation_6
+  - first:
+      213: -8299311593194714238
+    second: Questions-Exclamation_7
+  - first:
+      213: -2181699678624621590
+    second: Questions-Exclamation_8
+  - first:
+      213: -8642893171187708993
+    second: Questions-Exclamation_9
+  - first:
+      213: -1684723641599627909
+    second: Questions-Exclamation_10
+  - first:
+      213: -2719274250751359491
+    second: Questions-Exclamation_11
+  - first:
+      213: 683490734677948152
+    second: Questions-Exclamation_12
+  - first:
+      213: 7291065997013341603
+    second: Questions-Exclamation_13
+  - first:
+      213: 2007290801153472794
+    second: Questions-Exclamation_14
+  - first:
+      213: -3758159016536707403
+    second: Questions-Exclamation_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Questions-Exclamation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 317
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e72c59549bc50490800000000000000
+      internalID: -7780588943197853727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_1
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 651
+        width: 311
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a503d9c5968d22a0800000000000000
+      internalID: -6760599487718947416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_2
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 646
+        width: 372
+        height: 602
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef41fa1dcf044c590800000000000000
+      internalID: -7654922012029152002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_3
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 649
+        width: 287
+        height: 599
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9a76f2139644ee0800000000000000
+      internalID: -1277780734296741443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_4
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 650
+        width: 122
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986d2559fea43d410800000000000000
+      internalID: 1500625493707380361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_5
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 651
+        width: 113
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dafa62f73396de0800000000000000
+      internalID: -1339482792963101378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_6
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 647
+        width: 102
+        height: 601
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48a57efeea0f51e0800000000000000
+      internalID: -2207033270800635829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_7
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 649
+        width: 95
+        height: 599
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b095fd31ce2dc80800000000000000
+      internalID: -8299311593194714238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 316
+        height: 599
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebdef093bb09b1e0800000000000000
+      internalID: -2181699678624621590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 313
+        height: 593
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb05bbe3764e0880800000000000000
+      internalID: -8642893171187708993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_10
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 0
+        width: 373
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d60c526c8ae98e0800000000000000
+      internalID: -1684723641599627909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_11
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 0
+        width: 292
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5491de972334ad0800000000000000
+      internalID: -2719274250751359491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_12
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 0
+        width: 131
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6ffbfa33f3c7900800000000000000
+      internalID: 683490734677948152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_13
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 0
+        width: 131
+        height: 598
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5d8e105e11f2560800000000000000
+      internalID: 7291065997013341603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_14
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 0
+        width: 126
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1979ab39545bdb10800000000000000
+      internalID: 2007290801153472794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Questions-Exclamation_15
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 0
+        width: 122
+        height: 598
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bee5e9394658dbc0800000000000000
+      internalID: -3758159016536707403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

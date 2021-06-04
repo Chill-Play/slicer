@@ -1,0 +1,458 @@
+fileFormatVersion: 2
+guid: 2327169e6718b4f46a34d497b157a068
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6176972679387128169
+    second: SmallPanels_0
+  - first:
+      213: -4358870924404126173
+    second: SmallPanels_1
+  - first:
+      213: -9214014374610639481
+    second: SmallPanels_2
+  - first:
+      213: -8267486573211742639
+    second: SmallPanels_3
+  - first:
+      213: 6803980141029679612
+    second: SmallPanels_4
+  - first:
+      213: 1735532700528901131
+    second: SmallPanels_5
+  - first:
+      213: 3799604721785550715
+    second: SmallPanels_6
+  - first:
+      213: 7046303027596460312
+    second: SmallPanels_7
+  - first:
+      213: 2948341255688773579
+    second: SmallPanels_8
+  - first:
+      213: 4836166721590131207
+    second: SmallPanels_9
+  - first:
+      213: -973233847762998957
+    second: SmallPanels_0
+  - first:
+      213: -7342915912050532945
+    second: SmallPanels_1
+  - first:
+      213: 86078502212899279
+    second: SmallPanels_2
+  - first:
+      213: -5791102874442851032
+    second: SmallPanels_3
+  - first:
+      213: 8137218195770502861
+    second: SmallPanels_4
+  - first:
+      213: -3906697011669544876
+    second: SmallPanels_5
+  - first:
+      213: -4592892016108656329
+    second: SmallPanels_6
+  - first:
+      213: -807886318307960099
+    second: SmallPanels_7
+  - first:
+      213: -2511505418480772536
+    second: SmallPanels_8
+  - first:
+      213: -987776744618265316
+    second: SmallPanels_9
+  - first:
+      213: 6272672382881816852
+    second: SmallPanels_10
+  - first:
+      213: -1628111771517327554
+    second: SmallPanels_11
+  - first:
+      213: 4032550385751974227
+    second: SmallPanels_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SmallPanels_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2747
+        width: 1389
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35923bcc8f06e72f0800000000000000
+      internalID: -973233847762998957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_1
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2157
+        width: 343
+        height: 1021
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad1aa6e1e8b81a90800000000000000
+      internalID: -7342915912050532945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_2
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2154
+        width: 1389
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1923311ffc13100800000000000000
+      internalID: 86078502212899279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1862
+        width: 1782
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d17174e9ed1afa0800000000000000
+      internalID: -5791102874442851032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1597
+        width: 1082
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dceeeb216d43de070800000000000000
+      internalID: 8137218195770502861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_5
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1597
+        width: 655
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4505b5634cf98c9c0800000000000000
+      internalID: -3906697011669544876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1319
+        width: 1771
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739ad18ab05c240c0800000000000000
+      internalID: -4592892016108656329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 969
+        width: 614
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda1b528cafc9c4f0800000000000000
+      internalID: -807886318307960099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_8
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 969
+        width: 1110
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a1cffd027552dd0800000000000000
+      internalID: -2511505418480772536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 485
+        width: 1771
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15f2a3c846ba42f0800000000000000
+      internalID: -987776744618265316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 431
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411e2165c420d0750800000000000000
+      internalID: 6272672382881816852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_11
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 0
+        width: 430
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37e31c48f8c769e0800000000000000
+      internalID: -1628111771517327554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallPanels_12
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 0
+        width: 804
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3516c91e53f76f730800000000000000
+      internalID: 4032550385751974227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,422 @@
+fileFormatVersion: 2
+guid: 8bcc494189fd61f48b9417d53f2fee7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3312876009515217468
+    second: Double Arrows_0
+  - first:
+      213: -3971947648655235579
+    second: Double Arrows_1
+  - first:
+      213: -9045307660980092206
+    second: Double Arrows_2
+  - first:
+      213: -7370651114155560186
+    second: Double Arrows_3
+  - first:
+      213: -2879980335453014230
+    second: Double Arrows_4
+  - first:
+      213: 4157760509030619314
+    second: Double Arrows_5
+  - first:
+      213: 230656361040597969
+    second: Double Arrows_6
+  - first:
+      213: 598534663328987724
+    second: Double Arrows_7
+  - first:
+      213: -5183300734658307801
+    second: Double Arrows_8
+  - first:
+      213: 2734925457616280273
+    second: Double Arrows_9
+  - first:
+      213: -785078954070325084
+    second: Double Arrows_10
+  - first:
+      213: 9100064926663129861
+    second: Double Arrows_11
+  - first:
+      213: -4525402801339925275
+    second: Double Arrows_12
+  - first:
+      213: 7688246055947805820
+    second: Double Arrows_13
+  - first:
+      213: -4631377716447383022
+    second: Double Arrows_14
+  - first:
+      213: 2533558154633056614
+    second: Double Arrows_15
+  - first:
+      213: 1689003168030991450
+    second: Double Arrows_16
+  - first:
+      213: 5707695443770897176
+    second: Double Arrows_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Double Arrows_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 634
+        width: 794
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c327114ad23b9fd20800000000000000
+      internalID: 3312876009515217468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_1
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 634
+        width: 339
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506e47768aec0e8c0800000000000000
+      internalID: -3971947648655235579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_3
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 634
+        width: 962
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603bb61fcdf26b990800000000000000
+      internalID: -7370651114155560186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_4
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 634
+        width: 718
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a277639c4214808d0800000000000000
+      internalID: -2879980335453014230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_7
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 634
+        width: 569
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a7b79ea1c6e4800800000000000000
+      internalID: 598534663328987724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_8
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 634
+        width: 715
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7299ba2b1773118b0800000000000000
+      internalID: -5183300734658307801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_9
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 777
+        height: 610
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da1464a63864f520800000000000000
+      internalID: 2734925457616280273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_10
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 0
+        width: 333
+        height: 610
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8c00ec9d6da15f0800000000000000
+      internalID: -785078954070325084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_12
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 4
+        width: 962
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec7398f02a8231c0800000000000000
+      internalID: -4525402801339925275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_13
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 0
+        width: 711
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c742196cd0322ba60800000000000000
+      internalID: 7688246055947805820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_16
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 0
+        width: 590
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a542ffebe6b807710800000000000000
+      internalID: 1689003168030991450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Arrows_17
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 0
+        width: 718
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8137414f3cec53f40800000000000000
+      internalID: 5707695443770897176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

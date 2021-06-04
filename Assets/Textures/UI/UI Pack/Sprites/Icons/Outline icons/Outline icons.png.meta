@@ -1,0 +1,504 @@
+fileFormatVersion: 2
+guid: 8a7f5fada48211d4682503773b368241
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3630800196857570076
+    second: Outline icons_0
+  - first:
+      213: 7523001489916826483
+    second: Outline icons_1
+  - first:
+      213: 690912776221545409
+    second: Outline icons_2
+  - first:
+      213: 2636099532460531191
+    second: Outline icons_3
+  - first:
+      213: 1486368265791089596
+    second: Outline icons_4
+  - first:
+      213: -4393299759537195425
+    second: Outline icons_5
+  - first:
+      213: -4759514674615970775
+    second: Outline icons_6
+  - first:
+      213: -897959789789372614
+    second: Outline icons_7
+  - first:
+      213: 4500702097185738663
+    second: Outline icons_8
+  - first:
+      213: 3165559819764543219
+    second: Outline icons_9
+  - first:
+      213: -4762380229502196923
+    second: Outline icons_10
+  - first:
+      213: 6341103342665302989
+    second: Outline icons_11
+  - first:
+      213: 3323187732049407764
+    second: Outline icons_12
+  - first:
+      213: -7322646738941508767
+    second: Outline icons_13
+  - first:
+      213: 4867830873167058179
+    second: Outline icons_14
+  - first:
+      213: 518691518261637007
+    second: Outline icons_15
+  - first:
+      213: 4947530815803635029
+    second: Outline icons_16
+  - first:
+      213: -8870151283229525675
+    second: Outline icons_17
+  - first:
+      213: -8055599442473946251
+    second: Outline icons_18
+  - first:
+      213: 5966108463522800355
+    second: Outline icons_19
+  - first:
+      213: -6741263019003569334
+    second: Outline icons_20
+  - first:
+      213: -4191666008429082212
+    second: Outline icons_21
+  - first:
+      213: -532428412032795424
+    second: Outline icons_22
+  - first:
+      213: 5469162181807280831
+    second: Outline icons_23
+  - first:
+      213: -8718820863105160056
+    second: Outline icons_24
+  - first:
+      213: -5359972652518509810
+    second: Outline icons_25
+  - first:
+      213: 4001523386014268382
+    second: Outline icons_26
+  - first:
+      213: -3820413439609632745
+    second: Outline icons_27
+  - first:
+      213: -6338242097551159867
+    second: Outline icons_28
+  - first:
+      213: -6816111794551009674
+    second: Outline icons_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Outline icons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 653
+        width: 591
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c132d10da81336230800000000000000
+      internalID: 3630800196857570076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_2
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 653
+        width: 593
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3d675628d969900800000000000000
+      internalID: 690912776221545409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_3
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 653
+        width: 595
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd12e0ee8e459420800000000000000
+      internalID: 2636099532460531191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_4
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 653
+        width: 595
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 232, y: 232, z: 232, w: 232}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb24e70014a0a410800000000000000
+      internalID: 1486368265791089596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_5
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 653
+        width: 593
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56f9f8352dd703c0800000000000000
+      internalID: -4393299759537195425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_9
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 653
+        width: 594
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fea05c52e35eeb20800000000000000
+      internalID: 3165559819764543219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_13
+      rect:
+        serializedVersion: 2
+        x: 3947
+        y: 653
+        width: 595
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16308b5869bb06a90800000000000000
+      internalID: -7322646738941508767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 595
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f2efd0033c23700800000000000000
+      internalID: 518691518261637007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_17
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 597
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559f02b6764e6e480800000000000000
+      internalID: -8870151283229525675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_19
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 0
+        width: 596
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e26abba900ebc250800000000000000
+      internalID: 5966108463522800355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_21
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 0
+        width: 597
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99418649f534d5c0800000000000000
+      internalID: -4191666008429082212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_22
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 0
+        width: 595
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecb5702e2f6c98f0800000000000000
+      internalID: -532428412032795424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_23
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 0
+        width: 589
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb29f99070e56eb40800000000000000
+      internalID: 5469162181807280831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline icons_25
+      rect:
+        serializedVersion: 2
+        x: 3951
+        y: 0
+        width: 591
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0373d8554d8d95b0800000000000000
+      internalID: -5359972652518509810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

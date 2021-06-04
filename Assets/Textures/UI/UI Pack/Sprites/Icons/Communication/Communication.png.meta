@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: 5024120311801bb42a3a06091f820da5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8165432958593069129
+    second: Communication_0
+  - first:
+      213: 8874023318086475900
+    second: Communication_1
+  - first:
+      213: 7673426245641235662
+    second: Communication_2
+  - first:
+      213: 6408826619714301592
+    second: Communication_3
+  - first:
+      213: 8484757121322471124
+    second: Communication_4
+  - first:
+      213: 604032159020794846
+    second: Communication_5
+  - first:
+      213: 2729143853609944079
+    second: Communication_6
+  - first:
+      213: 6457758619467182955
+    second: Communication_7
+  - first:
+      213: -7679691191574199964
+    second: Communication_8
+  - first:
+      213: -4573303579151921812
+    second: Communication_9
+  - first:
+      213: -4376817072099011113
+    second: Communication_10
+  - first:
+      213: -6857526821006803176
+    second: Communication_11
+  - first:
+      213: 617600002293788685
+    second: Communication_12
+  - first:
+      213: -8516198299923147780
+    second: Communication_13
+  - first:
+      213: -5263373887759188300
+    second: Communication_14
+  - first:
+      213: -7767043201882836790
+    second: Communication_15
+  - first:
+      213: -2860992198715010768
+    second: Communication_16
+  - first:
+      213: -1170816712128178794
+    second: Communication_17
+  - first:
+      213: -4036335880969994904
+    second: Communication_18
+  - first:
+      213: 6828661461577708023
+    second: Communication_19
+  - first:
+      213: 558782818073833697
+    second: Communication_20
+  - first:
+      213: -6587116179335502208
+    second: Communication_21
+  - first:
+      213: -3196750794019423139
+    second: Communication_22
+  - first:
+      213: 1131125861709436947
+    second: Communication_23
+  - first:
+      213: 7624540553104914277
+    second: Communication_1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Communication_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 685
+        height: 580
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf0bc98cfd8eae80800000000000000
+      internalID: -8165432958593069129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Communication_11
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 611
+        width: 513
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ffc2460bb25d0a0800000000000000
+      internalID: -6857526821006803176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Communication_12
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 611
+        width: 630
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00700e0ee7229800800000000000000
+      internalID: 617600002293788685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Communication_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 692
+        height: 577
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4befb0ce55db4f6b0800000000000000
+      internalID: -5263373887759188300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Communication_19
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 0
+        width: 490
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f13db46b6744ce50800000000000000
+      internalID: 6828661461577708023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Communication_20
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 0
+        width: 629
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0f1e1330231c700800000000000000
+      internalID: 558782818073833697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Communication_23
+      rect:
+        serializedVersion: 2
+        x: 2153
+        y: 0
+        width: 827
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318d27f6af092bf00800000000000000
+      internalID: 1131125861709436947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Communication_1
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 602
+        width: 834
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567f06b8c3fcfc960800000000000000
+      internalID: 7624540553104914277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
