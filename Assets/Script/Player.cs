@@ -1,16 +1,21 @@
-﻿using System.Collections;
+﻿using GameFramework.Core;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity<Player>
 {
     public event System.Action OnDie;
+    public event System.Action OnCollision;
 
     [SerializeField] float speed = 6.0f;
     [SerializeField] float sliceSpeedMultiplier = 0.7f;
+    [SerializeField] float rightSpeed = 100f;
     [SerializeField] Knife knifePrefab;
     [SerializeField] List<Knife> knifes;
     [SerializeField] LayerMask groundMask;
+    Vector3 roadDirection = Vector3.forward;
+
     float currentSpeed;
     float targetSpeed;
     Rigidbody rigidbody;
@@ -22,20 +27,7 @@ public class Player : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        if(!this.enabled)
-        {
-            return;
-        }
-        UpdateSpeed();
-        if(Input.GetMouseButtonDown(0))
-        {
-            SpawnKnife();
-        }
-    }
-
-    private void UpdateSpeed()
+    public void UpdateSpeed()
     {
         bool slicing = false;
         for (int i = 0; i < knifes.Count; i++)
@@ -59,17 +51,22 @@ public class Player : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    public void Move(float input)
     {
         if (!this.enabled)
         {
             return;
         }
-        rigidbody.velocity = rigidbody.velocity.SetZ(currentSpeed);
+        Vector3 forwardVector = roadDirection * currentSpeed;
+        Vector3 leftVector = Vector3.Cross(roadDirection, Vector3.up) * input * rightSpeed;
+        //rigidbody.rotation = Quaternion.LookRotation(globalDirection);
+        Vector3 velocity = forwardVector + -leftVector;//rigidbody.velocity;
+        velocity.y = rigidbody.velocity.y;
+        rigidbody.velocity = velocity;
     }
 
 
-    void SpawnKnife()
+    public void SpawnKnife()
     {
         Knife instance = Instantiate(knifePrefab, transform.position, Quaternion.identity);
         Bounds newBounds = instance.GetComponent<Collider>().bounds;
@@ -91,16 +88,11 @@ public class Player : MonoBehaviour
     }
 
 
-    void Kill()
+    public void Kill()
     {
-        if(!this.enabled)
-        {
-            return;
-        }
         RagdollController ragdoll = GetComponentInChildren<RagdollController>();
         ragdoll.SetRagdollActive(true);
         ragdoll.transform.parent = null;
-        this.enabled = false;
         for(int i = knifes.Count - 1; i >= 0; i--)
         {
             knifes[i].Kill();
@@ -120,7 +112,7 @@ public class Player : MonoBehaviour
             float downDot = Vector3.Dot(collision.contacts[0].normal, Vector3.down);
             if (backDot > 0.5f || downDot > 0.5f)
             {
-                Kill();
+                OnCollision?.Invoke();
             }
         }
     }
@@ -131,7 +123,7 @@ public class Player : MonoBehaviour
         GameObject collisionGO = other.gameObject;
         if (groundMask == (groundMask | (1 << collisionGO.gameObject.layer)))
         {
-            Kill();
+            OnCollision?.Invoke();
         }
     }
 }

@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.enabled = false;
+        //player.enabled = false;
         player.OnDie += Player_OnDie;
     }
 

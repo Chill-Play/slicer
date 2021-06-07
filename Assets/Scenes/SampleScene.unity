@@ -610,7 +610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222777793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 14.55, z: 26.5}
+  m_LocalPosition: {x: 0, y: 21.6, z: 26.5}
   m_LocalScale: {x: 5.4674997, y: 4.275326, z: 19.989998}
   m_Children: []
   m_Father: {fileID: 0}
@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 240618606}
   - component: {fileID: 240618608}
   - component: {fileID: 240618607}
+  - component: {fileID: 240618609}
   m_Layer: 5
   m_Name: Main Background
   m_TagString: Untagged
@@ -690,6 +691,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240618605}
   m_CullTransparentMesh: 0
+--- !u!114 &240618609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240618605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e74571ea7da8e4eb5e56dbe83ac87a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sensivity: 1
+  inputId: {fileID: 11400000, guid: 5f2c9ea7e5dd10948bd2a270893ed879, type: 2}
 --- !u!1 &242190895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,7 +3175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952983716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 14.51, z: 69.69}
+  m_LocalPosition: {x: 0, y: 21.559998, z: 69.69}
   m_LocalScale: {x: 5.4674997, y: 4.275326, z: 19.989998}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5422,7 +5437,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 114
+  m_Constraints: 112
   m_CollisionDetection: 3
 --- !u!114 &1554087898
 MonoBehaviour:
@@ -5431,13 +5446,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554087896}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5f2819500efdc94586245ec58eee35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
   sliceSpeedMultiplier: 0.75
+  rightSpeed: 200
   knifePrefab: {fileID: 1159461291, guid: 4593fca08f8b0d347908e682fb420715, type: 3}
   knifes: []
   groundMask:
@@ -6628,6 +6644,50 @@ MonoBehaviour:
   count: 25
   axis: {x: 0, y: 0, z: 1}
   cardPrefab: {fileID: 866033641, guid: c6d8b64c9e63f5d459b66c46b5a1bfd0, type: 3}
+--- !u!1 &2045927857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045927859}
+  - component: {fileID: 2045927858}
+  m_Layer: 0
+  m_Name: TestGameSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2045927858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045927857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6931642f968350e408724d90e3a55ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputId: {fileID: 11400000, guid: 5f2c9ea7e5dd10948bd2a270893ed879, type: 2}
+--- !u!4 &2045927859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045927857}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.807014, y: 1.56107, z: 0.48718357}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095384897
 GameObject:
   m_ObjectHideFlags: 0
