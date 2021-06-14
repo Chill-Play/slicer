@@ -5,5 +5,5 @@ using UnityEngine;
 public interface ISlicable
 {
     event System.Action OnSlice;
-    bool TryToSlice(float penetration);
+    bool TryToSlice(float penetration, Vector3 point, Vector3 knifeRight);
 }

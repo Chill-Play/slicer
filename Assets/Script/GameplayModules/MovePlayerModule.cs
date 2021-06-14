@@ -14,6 +14,14 @@ public class MovePlayerModule : GameplayModule
     }
 
 
+    public override void Initialize()
+    {
+        base.Initialize();
+        Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
+        player.Animator.SetTrigger("Start");
+    }
+
+
     [LifecycleEvent(typeof(UpdateEvent))]
     public void Update()
     {
@@ -25,14 +33,17 @@ public class MovePlayerModule : GameplayModule
     [LifecycleEvent(typeof(FixedUpdateEvent))]
     public void FixedUpdate()
     {
+        Road road = IoCContainer.Get<EntityService>().GetFirstEntity<Road>();
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
+        if (player.Finished) return;
         float input = inputInfo.GetData().inputX;
         if (!inputInfo.GetData().inputActive)
         {
             input = 0f;
             lastInput = 0f;
         }
-        player.Move(input - lastInput);
+        RoadPointInfo roadPointInfo = road.GetRoadPointInfo(player.transform.position);
+        player.Move(input - lastInput, roadPointInfo.direction, roadPointInfo.point, road.RoadWidth);
         lastInput = input;
     }
 }

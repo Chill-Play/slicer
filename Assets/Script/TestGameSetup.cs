@@ -6,11 +6,23 @@ using UnityEngine;
 public class TestGameSetup : MonoBehaviour
 {
     [SerializeField] DataId inputId;
-    void Start()
+
+
+    private void Awake()
+    {
+        FindObjectOfType<GameController>().OnGameStart += TestGameSetup_OnGameStart;
+    }
+
+    private void TestGameSetup_OnGameStart()
+    {
+        StartGame();
+    }
+
+    void StartGame()
     {
         GameplayService gameplayService = IoCContainer.Get<GameplayService>();
         gameplayService.AddGameplayModule(new MovePlayerModule(inputId));
-        gameplayService.AddGameplayModule(new KnifeSpawningModule());
+        //gameplayService.AddGameplayModule(new KnifeSpawningModule());
         gameplayService.AddGameplayModule(new KillPlayerModule());
     }
 }

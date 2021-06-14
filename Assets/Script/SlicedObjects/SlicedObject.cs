@@ -1,49 +1,86 @@
-﻿using System;
+﻿using EzySlice;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SlicedObject : MonoBehaviour, ISlicable
 {
+    public static event System.Action OnSliceGlobal;
     [SerializeField] float sliceVelocity;
     [SerializeField] float penetrationRotation = 30f;
     [SerializeField] float maxPenetration = 1f;
     [SerializeField] float randomAngularVelocityMultiplier = 0.0f;
     [SerializeField] float sliceAngularVelocity;
-    [SerializeField] Rigidbody rightPart;
-    [SerializeField] Rigidbody leftPart;
+    [SerializeField] WindDragSettings dragSettings;
+    [SerializeField] bool addScore = true;
+    
+    Rigidbody rightPart;
+    Rigidbody leftPart;
     [SerializeField] bool inverseLeftPartVelocity;
-
+    bool partsCreated;
     public event Action OnSlice;
 
     public float SliceVelocityPower { get; set; } = 1.0f;
     public Color Color { get; set; }  = Color.white;
-
-
-    void Awake()
-    {
-        rightPart.isKinematic = true;
-        leftPart.isKinematic = true;
-    }
     
 
-    public bool TryToSlice(float penetration)
+    public bool TryToSlice(float penetration, Vector3 pos, Vector3 knifeRight)
     {
         bool sliced = false;
-        if (penetration > maxPenetration)
+
+        if(!partsCreated)
         {
-            PushPart(rightPart, rightPart.transform.right);
-            PushPart(leftPart, (inverseLeftPartVelocity) ? -leftPart.transform.right : leftPart.transform.right);
-            Destroy(this);
-            sliced = true;
-            OnSlice?.Invoke();
+            GameObject[] parts = gameObject.SliceInstantiate(pos, knifeRight, GetComponentInChildren<MeshRenderer>().material);
+            if (parts != null && parts.Length > 0)
+            {
+                GetComponentInChildren<MeshRenderer>().enabled = false;
+                rightPart = parts[0].AddComponent<Rigidbody>();
+                rightPart.transform.position = transform.position;
+                rightPart.transform.parent = transform;
+
+                leftPart = parts[1].AddComponent<Rigidbody>();
+                leftPart.transform.position = transform.position;
+                rightPart.isKinematic = true;
+                leftPart.isKinematic = true;
+                leftPart.transform.parent = transform;
+
+                rightPart.gameObject.layer = 14;
+                leftPart.gameObject.layer = 14;
+
+                rightPart.gameObject.AddComponent<BoxCollider>();
+                leftPart.gameObject.AddComponent<BoxCollider>();
+                if(dragSettings != null)
+                {
+                    rightPart.gameObject.AddComponent<WindDrag>().Settings = dragSettings;
+                    leftPart.gameObject.AddComponent<WindDrag>().Settings = dragSettings;
+                }
+                partsCreated = true;
+            }
         }
-        else
+        if (partsCreated)
         {
-            float rotation = Mathf.Lerp(0f, penetrationRotation, penetration / maxPenetration);
-            rightPart.transform.localEulerAngles = rightPart.transform.localEulerAngles.SetY(rotation);
-            leftPart.transform.localEulerAngles = leftPart.transform.localEulerAngles.SetY(-rotation);
+            if (maxPenetration == 0f || penetration > maxPenetration)
+            {
+                PushPart(rightPart, transform.right);
+                PushPart(leftPart, -transform.right);
+                Destroy(this);
+                GetComponent<Collider>().enabled = false;   
+                sliced = true;
+                OnSlice?.Invoke();
+                if (addScore)
+                {
+                    OnSliceGlobal?.Invoke();
+                }
+            }
+            else
+            {
+                float rotation = Mathf.Lerp(0f, penetrationRotation, penetration / maxPenetration);
+                rightPart.transform.localEulerAngles = rightPart.transform.localEulerAngles.SetY(rotation);
+                leftPart.transform.localEulerAngles = leftPart.transform.localEulerAngles.SetY(-rotation);
+            }
         }
         return sliced;
     }

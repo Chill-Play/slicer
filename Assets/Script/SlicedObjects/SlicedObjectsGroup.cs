@@ -15,8 +15,9 @@ public class SlicedObjectsGroup : MonoBehaviour
         ISlicedObjectsGroupModifier[] modifiers = GetComponents<ISlicedObjectsGroupModifier>();
         for(int i = 0; i < count; i++)
         {
-            Vector3 pos = transform.position + axis * step * i;
-            SlicedObject slicedObject = Instantiate(cardPrefab, pos, Quaternion.identity, transform);
+            Vector3 worldAxis = transform.TransformDirection(axis);
+            Vector3 pos = transform.position + worldAxis * step * i;
+            SlicedObject slicedObject = Instantiate(cardPrefab, pos, Quaternion.LookRotation(worldAxis), transform);
             float slicePower = 1.0f - ((float)i / transform.childCount);
             slicePower = Mathf.Clamp(slicePower, minimalVelocity, 1.0f);
             slicedObject.SliceVelocityPower = slicePower;

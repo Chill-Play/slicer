@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakVfx : MonoBehaviour
 {
     [SerializeField] ParticleSystem breakVfx;
+    [SerializeField] Vector3 scale = Vector3.one;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -26,6 +27,7 @@ public class BreakVfx : MonoBehaviour
         {
             main.startColor = GetComponent<SlicedObject>().Color;
         }
+        vfx.transform.localScale = scale;
         //vfx. = main;
     }
 

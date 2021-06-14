@@ -46,11 +46,11 @@ public class GameController : MonoBehaviour
             }
         }
 
-        levelProgress = player.transform.position.z / finish.transform.position.z;
-        if(levelProgress >= 1f && player.enabled)
-        {
-            player.enabled = false;
-            OnWin?.Invoke();
-        }
+        //levelProgress = player.transform.position.z / finish.transform.position.z;
+        //if(levelProgress >= 1f && player.enabled)
+        //{
+        //    player.enabled = false;
+        //    OnWin?.Invoke();
+        //}
     }
 }

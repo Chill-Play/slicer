@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class WindDrag : MonoBehaviour
 {
-    [SerializeField] Vector3 dragAxis;
-    [SerializeField] float dragPower;
+    public WindDragSettings Settings { get; set; }
 
     Rigidbody rigidbody;
 
@@ -17,11 +16,11 @@ public class WindDrag : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 worldDragAxis = transform.TransformDirection(dragAxis);
+        Vector3 worldDragAxis = transform.TransformDirection(Settings.dragAxis);
         float dot = Vector3.Dot(rigidbody.velocity, worldDragAxis);
         float dragCoeff = Mathf.Abs(dot);
 
-        Vector3 dragForce = -rigidbody.velocity * dragCoeff * dragPower;
+        Vector3 dragForce = -rigidbody.velocity * dragCoeff * Settings.dragPower;
         rigidbody.AddForce(dragForce, ForceMode.Acceleration);
     }
 }

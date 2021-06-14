@@ -52,14 +52,15 @@ namespace GameFramework.Core
 
         public void Clear()
         {
-            //if (GameplayModules != null)
-            //{
-            //    for (int i = 0; i < GameplayModules.Count; i++)
-            //    {
-            //        GameplayModules[i].End();
-            //    }
-            //    GameplayModules.Clear();
-            //}
+            if (GameplayModules != null)
+            {
+                for (int i = GameplayModules.Count - 1; i >= 0; i--)
+                {
+                    //RemoveGameplayModule(GameplayModules[i]);//.End();
+                    GameplayModules[i].SetActive(false); // refactor
+                }
+                //GameplayModules.Clear();
+            }
         }
 
         #endregion

@@ -5,7 +5,7 @@ using GameFramework.Core;
 
 public class KillPlayerModule : GameplayModule
 {
-
+    bool playerKilled = false;
     public override void Initialize()
     {
         base.Initialize();
@@ -16,10 +16,14 @@ public class KillPlayerModule : GameplayModule
 
     private void Player_OnCollision()
     {
-        if (Enabled)
+        if (Enabled && !playerKilled)
         {
             Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
-            player.Kill();
+            if (!player.Finished)
+            {
+                player.Kill();
+                playerKilled = true;
+            }
         }
     }
 
