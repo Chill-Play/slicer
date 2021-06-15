@@ -68,6 +68,7 @@ MonoBehaviour:
   randomAngularVelocityMultiplier: 1
   sliceAngularVelocity: 0
   dragSettings: {fileID: 11400000, guid: 394d367aea956a840940318983029d47, type: 2}
+  addScore: 1
   inverseLeftPartVelocity: 0
 --- !u!114 &8314413707925221461
 MonoBehaviour:
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakVfx: {fileID: 6740758900381410031, guid: e29d4ac4600c24e4caceb6d30532765c,
     type: 3}
+  scale: {x: 1, y: 1, z: 1}
 --- !u!114 &2018011158836054522
 MonoBehaviour:
   m_ObjectHideFlags: 0

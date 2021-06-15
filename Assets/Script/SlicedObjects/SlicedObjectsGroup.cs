@@ -37,4 +37,13 @@ public class SlicedObjectsGroup : MonoBehaviour
     {
         
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        float axisSize = step*count;
+        Vector3 size = axis * step*count + new Vector3 (3f, 1f, 0f);
+        Vector3 delta = axis * step*count*0.5f;
+        Gizmos.DrawWireCube(transform.position + delta, size);
+    }
 }
