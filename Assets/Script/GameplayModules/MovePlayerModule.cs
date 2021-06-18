@@ -43,7 +43,9 @@ public class MovePlayerModule : GameplayModule
             lastInput = 0f;
         }
         RoadPointInfo roadPointInfo = road.GetRoadPointInfo(player.transform.position);
+        RoadPointInfo cameraRoadPointInfo = road.GetRoadPointInfo(player.transform.position + roadPointInfo.direction * 10f);
         player.Move(input - lastInput, roadPointInfo.direction, roadPointInfo.point, road.RoadWidth);
+        Object.FindObjectOfType<CameraController>().SetRotation(Quaternion.LookRotation(cameraRoadPointInfo.direction));
         lastInput = input;
     }
 }

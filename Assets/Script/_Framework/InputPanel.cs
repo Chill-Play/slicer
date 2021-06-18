@@ -42,7 +42,7 @@ public class InputPanel : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnDrag(PointerEventData eventData)
     {
-        _delta = (eventData.position - _start)/Screen.width * _sensivity;
+        _delta = (eventData.position - _start) * _sensivity;
         Input = _delta;
         UpdateInput();
     }

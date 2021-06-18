@@ -7,9 +7,15 @@ public class MultiplierText : MonoBehaviour
 {
     [SerializeField] AnimationCurve scaleCurve;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         FinishTarget.OnUpdateMultiplier += FinishTarget_OnUpdateMultiplier;
+    }
+
+
+    private void OnDisable()
+    {
+        FinishTarget.OnUpdateMultiplier -= FinishTarget_OnUpdateMultiplier;
     }
 
     private void FinishTarget_OnUpdateMultiplier(int obj)

@@ -15,6 +15,8 @@ public class Player : Entity<Player>
     [SerializeField] List<Knife> knifes;
     [SerializeField] LayerMask groundMask;
     [SerializeField] Animator animator;
+    [SerializeField] bool rotateWithInput;
+    [SerializeField] float additionalGravity;
     Vector3 roadDirection = Vector3.forward;
     Vector3 roadPoint;
 
@@ -55,8 +57,16 @@ public class Player : Entity<Player>
     }
 
 
+    private void FixedUpdate()
+    {
+        rigidbody.AddForce(Vector3.down * additionalGravity, ForceMode.Acceleration);
+    }
+
+
     // Update is called once per frame
     Vector3 lastRoadPoint;
+    Vector3 lastPosition;
+    float angleSmoothVelocity;
     public void Move(float input, Vector3 direction, Vector3 roadPoint,float roadWidth)
     {
         if (!this.enabled)
@@ -88,16 +98,30 @@ public class Player : Entity<Player>
             velocity += roadRightDirection * ((roadWidth - offset) - Mathf.Abs(distanceToRoadPoint)) * Mathf.Sign(distanceToRoadPoint) / Time.fixedDeltaTime;
             
         }
-        //dot(AP,AB) / dot(AB,AB) * AB
 
         //Vector3 projection = Vector3.Dot(rigidbody.position - roadPoint, direction) / Vector3.Dot(direction, direction) * direction;
+        Vector3 forward = ((rigidbody.position + velocity) - lastPosition).SetY(0f);
+        if (rotateWithInput)
+        {
+            //rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, Quaternion.LookRotation(forward), Time.fixedDeltaTime * 25f);
+            Quaternion rotation = rigidbody.rotation;
+
+            float delta = Quaternion.Angle(rotation, Quaternion.LookRotation(forward));
+            if (delta > 0f)
+            {
+                float t = Mathf.SmoothDampAngle(delta, 0.0f, ref angleSmoothVelocity, 0.02f, Mathf.Infinity, Time.fixedDeltaTime);
+                t = 1.0f - (t / delta);
+                rotation = Quaternion.Slerp(rotation, Quaternion.LookRotation(forward), t);
+            }
+
+            rigidbody.rotation = rotation;
+        }
+
         this.roadPoint = roadPoint;
-        transform.forward = Vector3.Lerp(transform.forward, velocity.normalized, Time.fixedDeltaTime * 10f);
         lastRoadPoint = projectedRoadPoint;
         velocity.y = rigidbody.velocity.y;
         rigidbody.velocity = velocity;
-
-        FindObjectOfType<CameraController>().SetRotation(Quaternion.LookRotation(direction));
+        lastPosition = rigidbody.position;
     }
 
 
@@ -151,8 +175,8 @@ public class Player : Entity<Player>
         while(animator.transform.position.y > 0f)
         {
             yield return new WaitForEndOfFrame();
-            playerAcceleration += Physics.gravity * Time.deltaTime;
-            playerSpeed += playerAcceleration * Time.deltaTime * 4f;
+            playerAcceleration += Physics.gravity * Time.deltaTime * 2f;
+            playerSpeed += playerAcceleration * Time.deltaTime * 6f;
             animator.transform.position += playerSpeed * Time.deltaTime;
             if(animator.transform.position.y < 0f)
             {
@@ -161,18 +185,21 @@ public class Player : Entity<Player>
             Vector3 directionToAnimator = (animator.transform.position + (Vector3.up * 0.7f)) - startPos.SetY(0);
             directionToAnimator.Normalize();
             float angle = Vector3.SignedAngle(Vector3.up, directionToAnimator, transform.right);
-            transform.position = startPos;
+            transform.position = startPos + Vector3.up * (angle) / 90f;
             Vector3 currentOffset = startPos.SetY(0) - animator.transform.position;
             animator.transform.position += (currentOffset.normalized) * (currentOffset.magnitude - startOffset.magnitude);
             transform.RotateAround(startPos.SetY(0f), Vector3.right, angle);
             transform.up = transform.position - startPos.SetY(0f);
         }
+        animator.GetComponentInChildren<InverseKinematics>().enabled = false;
+        yield return new WaitForEndOfFrame();
         Transform rightHand = animator.GetComponentInChildren<Character>().RightHand;
-        transform.parent = rightHand;
+        transform.SetParent(rightHand, true);
         float t = 0f;
+        transform.up = transform.position - startPos.SetY(0f);
         Quaternion startLocalRotation = transform.localRotation;
         Vector3 startLocalPosition = transform.localPosition;
-        animator.GetComponentInChildren<InverseKinematics>().enabled = false;
+       
         while (t < 1f)
         {
             yield return new WaitForEndOfFrame();
@@ -181,7 +208,7 @@ public class Player : Entity<Player>
             transform.localPosition = Vector3.Lerp(startLocalPosition, new Vector3(0f, -0.01151f, 0f), t);
         }
         animator.SetTrigger("Throw");
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(0.4f);
         transform.parent = null;
         t = 0f;
         startPos = transform.position;
