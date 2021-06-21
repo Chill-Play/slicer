@@ -156,6 +156,7 @@ public class Player : Entity<Player>
 
     private void FinishTarget_OnLastFinishTargetHitted()
     {
+        StartCoroutine(WinCoroutine()); //Refactor
         knifeHittedLastTarget = true;
         for (int i = 0; i < knifes.Count; i++)
         {
@@ -218,7 +219,7 @@ public class Player : Entity<Player>
             transform.localPosition = Vector3.Lerp(startLocalPosition, new Vector3(0f, -0.01151f, 0f), t);
         }
         animator.SetTrigger("Throw");
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         transform.parent = null;
         t = 0f;
         startPos = transform.position;
@@ -244,11 +245,19 @@ public class Player : Entity<Player>
                 * 0.15f));
             if(knifeHittedLastTarget)
             {
+                StartCoroutine(WinCoroutine());
                 break;
             }
             //transform.up = transform.position - nextPos;
             transform.position = nextPos;
         }
+    }
+
+
+    IEnumerator WinCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
+        FindObjectOfType<GameController>().FinishGame();
     }
 
 

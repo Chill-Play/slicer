@@ -40,6 +40,13 @@ public class GameController : MonoBehaviour
     }
 
 
+    public void FinishGame()
+    {
+        FindObjectOfType<GameFlowController>().MoveToState(winStateId);
+        OnWin?.Invoke();
+    }
+
+
 
     // Update is called once per frame
     void Update()

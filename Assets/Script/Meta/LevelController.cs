@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
@@ -16,11 +17,12 @@ public class LevelController : MonoBehaviour
     }
 
 
-    void NextLevel()
+    public void NextLevel()
     {
         int level = currentLevel + 1;
         PlayerPrefs.SetInt(LEVEL_NUMBER_PREFS, level);
-        sequence.GetScene(level);
+        SceneReference scene = sequence.GetScene(level);
+        SceneManager.LoadScene(scene);
     }
     
 }

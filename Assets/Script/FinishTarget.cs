@@ -28,7 +28,7 @@ public class FinishTarget : MonoBehaviour
         }
         if (lastFinishTarget)
         {
-            OnLastFinishTargetHitted.Invoke();
+            OnLastFinishTargetHitted?.Invoke();
         }
         else
         {
