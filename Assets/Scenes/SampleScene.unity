@@ -2919,6 +2919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3195502010139503803, guid: 8a182537b6394cf45a6472e530ea0ff3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
 --- !u!23 &728419807 stripped
@@ -3259,6 +3264,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3195502010139503803, guid: 8a182537b6394cf45a6472e530ea0ff3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
 --- !u!114 &840148301 stripped
@@ -3366,6 +3376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Target (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195502010139503803, guid: 8a182537b6394cf45a6472e530ea0ff3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
@@ -3648,6 +3663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Target (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195502010139503803, guid: 8a182537b6394cf45a6472e530ea0ff3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
@@ -4187,7 +4207,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000012514559, y: 0.00470775, z: 0.000000012340009}
+  m_ConnectedAnchor: {x: -0.0000000010477306, y: 0.00470775, z: 0.000000009546045}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -5132,7 +5152,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000033758603, y: 0.005261741, z: -0.000000002095475}
+  m_ConnectedAnchor: {x: -0.0000000026774063, y: 0.0052617406, z: -0.0000000018626444}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -5794,7 +5814,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0029482997, y: 0.0050102426, z: -0.0004300264}
+  m_ConnectedAnchor: {x: -0.0029482993, y: 0.0050102407, z: -0.00043002656}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -5905,7 +5925,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 6.985011e-10, y: 0.005261745, z: 0.0000000012805694}
+  m_ConnectedAnchor: {x: 0, y: 0.0052617444, z: 0.0000000012223618}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -7644,6 +7664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3195502010139503803, guid: 8a182537b6394cf45a6472e530ea0ff3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
 --- !u!23 &1854123861 stripped
@@ -7717,7 +7742,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000006228216, y: 0.004707743, z: 0}
+  m_ConnectedAnchor: {x: 0.000000004831233, y: 0.004707745, z: -2.3282905e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -8417,6 +8442,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Target (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195502010139503803, guid: 8a182537b6394cf45a6472e530ea0ff3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}

@@ -20,6 +20,14 @@ public class Finish : MonoBehaviour
                 targets[i].SetMultiplier(multipliers[i], multipliers[i]);
             }
         }
+        targets[0].SetAsLastFinishTarget();
+
+    }
+
+    public void CalculateLastTarget(int knifeCount)
+    {
+        int lastTarget = Mathf.Clamp(targets.Length - knifeCount, 0, targets.Length - 1);
+        targets[lastTarget].SetAsLastFinishTarget();
     }
 
     // Update is called once per frame

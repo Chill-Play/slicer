@@ -25,10 +25,16 @@ public class SlicedObject : MonoBehaviour, ISlicable
 
     public float SliceVelocityPower { get; set; } = 1.0f;
     public Color Color { get; set; }  = Color.white;
-    
+    public bool Unsliceable { get; set; } = false;
+
 
     public bool TryToSlice(float penetration, Vector3 pos, Vector3 knifeRight)
     {
+        if (Unsliceable)
+        {
+            OnSlice?.Invoke();
+            return false;
+        }
         bool sliced = false;
 
         if(!partsCreated)
@@ -67,7 +73,7 @@ public class SlicedObject : MonoBehaviour, ISlicable
                 PushPart(rightPart, transform.right);
                 PushPart(leftPart, -transform.right);
                 Destroy(this);
-                GetComponent<Collider>().enabled = false;   
+                GetComponent<Collider>().enabled = false;
                 sliced = true;
                 OnSlice?.Invoke();
                 if (addScore)
@@ -81,7 +87,7 @@ public class SlicedObject : MonoBehaviour, ISlicable
                 rightPart.transform.localEulerAngles = rightPart.transform.localEulerAngles.SetY(rotation);
                 leftPart.transform.localEulerAngles = leftPart.transform.localEulerAngles.SetY(-rotation);
             }
-        }
+        }   
         return sliced;
     }
 

@@ -66,12 +66,12 @@ public class Knife : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if(DestroyOnSlice && sliced)
-        {
+        {            
             return;
         }
         ISlicable slicable = other.GetComponent<ISlicable>();
         if(slicable != null)
-        {
+        {          
             //float penetration = sliceCollider.bounds.max.z - other.bounds.min.z;
             //Physics.ComputePenetration(sliceCollider, transform.position, transform.rotation, other, other.transform.position, other.transform.rotation, out Vector3 direction, out float distance);
             float penetration = ComputePenetration(other.bounds, transform.forward, transform.position + (transform.forward * sliceCollider.bounds.extents.z));
@@ -88,7 +88,7 @@ public class Knife : MonoBehaviour
                         Kill();
                     }
                     sliceObjects--;
-                }
+                }           
             }
         }
     }

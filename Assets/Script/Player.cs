@@ -130,6 +130,8 @@ public class Player : Entity<Player>
         if (Finished)
             return;
         Finished = true;
+        FinishTarget.OnLastFinishTargetHitted += FinishTarget_OnLastFinishTargetHitted;
+        FindObjectOfType<Finish>().CalculateLastTarget(knifes.Count);
         rigidbody.isKinematic = true;
         rigidbody.constraints = RigidbodyConstraints.None;
         FindObjectOfType<CameraController>().SetRotate(false);
@@ -150,6 +152,15 @@ public class Player : Entity<Player>
             }
         }
         StartCoroutine(FinishCoroutine());
+    }
+
+    private void FinishTarget_OnLastFinishTargetHitted()
+    {
+        knifeHittedLastTarget = true;
+        for (int i = 0; i < knifes.Count; i++)
+        {
+            knifes[i].CanSlice = false;
+        }
     }
 
     private void Knife_OnStartSlice()
