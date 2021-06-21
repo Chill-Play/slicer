@@ -10,6 +10,11 @@ public class UIAnimationSettings : ScriptableObject
         return null;
     }
 
+    public virtual void Initialize(IEnumerator<RectTransform> nodeTransforms)
+    {
+
+    }
+
     public bool HasNodeTag(UINode node)
     {
         for (int i = 0; i < node.NodeTags.Count; i++)
@@ -34,7 +39,7 @@ public class UIAnimation
 
     public UIAnimationSettings AnimationSettings => animationSettings;
 
-    public virtual void Play(List<RectTransform> nodeTransforms, System.Action onAnimationEndCallback = null)
+    public virtual void Play(IEnumerator<RectTransform> nodeTransforms, System.Action onAnimationEndCallback = null)
     {
         this.onAnimationEndCallback += onAnimationEndCallback;       
     }
