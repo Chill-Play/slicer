@@ -16,6 +16,6 @@ public class MainScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        progressBarFill.fillAmount = Mathf.Lerp(progressBarFill.fillAmount, gameController.LevelProgress, Time.deltaTime * 10f);
+        
     }
 }

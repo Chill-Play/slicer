@@ -92,7 +92,7 @@ namespace GameFramework.Core
                 statesStack[i].End();
             }
             statesStack.Clear();
-            Debug.Log("GameFlow : Set current stage : " + state.GetType().Name);
+            Debug.Log("GameFlow : Set current stage : " + state.Id.name);
             for(int i = 0; i < statesList.Count; i++)
             {
                 statesList[i].gameObject.SetActive(statesList[i] == state);
