@@ -8,19 +8,19 @@ public class GameController : MonoBehaviour
     public event System.Action OnGameStart;
     public event System.Action OnWin;
     public event System.Action OnLose;
-    [SerializeField] Player player;
-    [SerializeField] Transform finish;
+
     [SerializeField] SubjectId gameStateId;
     [SerializeField] SubjectId winStateId;
     [SerializeField] SubjectId loseStateId;
-    float levelProgress;
-    bool gameStarted;
 
-    public float LevelProgress => levelProgress;
+    Player player;
+    bool gameStarted;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<Player>();
+        FindObjectOfType<CameraController>().Target = player.transform;
         //player.enabled = false;
         player.OnDie += Player_OnDie;
     }

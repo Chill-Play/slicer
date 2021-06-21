@@ -225,7 +225,7 @@ public class Player : Entity<Player>
         Vector3 targetPos = FindObjectOfType<TargetPoint>().transform.position;
         startLocalRotation = transform.rotation;
         CameraController cameraController = FindObjectOfType<CameraController>();
-        cameraController.SetTarget(transform);
+        cameraController.Target = transform;
         for(int j = 0; j < knifes.Count; j++)
         {
             Rigidbody rb = knifes[j].gameObject.AddComponent<Rigidbody>();
