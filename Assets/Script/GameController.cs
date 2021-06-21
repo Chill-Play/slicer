@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameFramework.Core;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ public class GameController : MonoBehaviour
     public event System.Action OnLose;
     [SerializeField] Player player;
     [SerializeField] Transform finish;
+    [SerializeField] SubjectId gameStateId;
+    [SerializeField] SubjectId winStateId;
+    [SerializeField] SubjectId loseStateId;
     float levelProgress;
     bool gameStarted;
 
@@ -24,10 +28,12 @@ public class GameController : MonoBehaviour
     private void Player_OnDie()
     {
         OnLose?.Invoke();
+        FindObjectOfType<GameFlowController>().MoveToState(loseStateId);
     }
 
     public void StartGame()
     {
+        FindObjectOfType<GameFlowController>().MoveToState(gameStateId);
         player.enabled = true;
         gameStarted = true;
         OnGameStart?.Invoke();

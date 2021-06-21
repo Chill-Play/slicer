@@ -130,7 +130,6 @@ public class Player : Entity<Player>
         if (Finished)
             return;
         Finished = true;
-        IoCContainer.Get<GameplayService>().Clear(); // refactor
         rigidbody.isKinematic = true;
         rigidbody.constraints = RigidbodyConstraints.None;
         FindObjectOfType<CameraController>().SetRotate(false);

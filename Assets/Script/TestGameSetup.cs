@@ -21,8 +21,8 @@ public class TestGameSetup : MonoBehaviour
     void StartGame()
     {
         GameplayService gameplayService = IoCContainer.Get<GameplayService>();
-        gameplayService.AddGameplayModule(new MovePlayerModule(inputId));
+        //gameplayService.AddGameplayModule(new MovePlayerModule(inputId));
         //gameplayService.AddGameplayModule(new KnifeSpawningModule());
-        gameplayService.AddGameplayModule(new KillPlayerModule());
+        //gameplayService.AddGameplayModule(new KillPlayerModule());
     }
 }

@@ -6,9 +6,8 @@ using GameFramework.Core;
 public class KillPlayerModule : GameplayModule
 {
     bool playerKilled = false;
-    public override void Initialize()
+    public void OnEnable()
     {
-        base.Initialize();
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
         player.OnCollision += Player_OnCollision;
     }
@@ -16,7 +15,7 @@ public class KillPlayerModule : GameplayModule
 
     private void Player_OnCollision()
     {
-        if (Enabled && !playerKilled)
+        if (!playerKilled)
         {
             Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
             if (!player.Finished)
@@ -28,9 +27,8 @@ public class KillPlayerModule : GameplayModule
     }
 
 
-    public override void End()
+    public void OnDisable()
     {
-        base.End();
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
         player.OnCollision -= Player_OnCollision;
     }

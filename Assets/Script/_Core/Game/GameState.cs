@@ -2,11 +2,18 @@
 
 namespace GameFramework.Core
 {
-    public class GameState
+    public class GameState : MonoBehaviour
     {
         #region Variables
 
-        public string id;
+        [SerializeField] SubjectId id;
+
+        #endregion
+
+
+        #region Properties
+
+        public SubjectId Id => id;
 
         #endregion
 

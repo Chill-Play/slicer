@@ -1,14 +1,17 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace GameFramework.Core
 {
-    [AutoInitializeService]
-    public class GameFlowService : IService
+    public class GameFlowController : MonoBehaviour
     {
         #region Variables
 
+        [SerializeField] SubjectId startState;
+
         List<GameState> statesStack = new List<GameState>();
+        List<GameState> statesList = new List<GameState>();
 
         #endregion
 
@@ -29,19 +32,35 @@ namespace GameFramework.Core
         #endregion
 
 
+        #region Unity Lifecycle
+
+        private void Awake()
+        {
+            statesList = GetComponentsInChildren<GameState>(true).ToList();
+            if(startState != null)
+            {
+                MoveToState(startState);
+            }
+        }
+
+        #endregion
+
+
 
         #region IGameFlow
 
-        public void MoveToState(GameState state)
+        public void MoveToState(SubjectId stateId)
         {
-            SetCurrentState(state);
+            SetCurrentState(FindState(stateId));
         }
 
 
-        public void AppendState(GameState state)
+        public void AppendState(SubjectId stateId)
         {
             CurrentState.Pause();
-            statesStack.Add(state);
+            GameState state = FindState(stateId);
+            state.gameObject.SetActive(true);
+            statesStack.Add(FindState(stateId));
             CurrentState.Initialize();
         }
 
@@ -59,6 +78,13 @@ namespace GameFramework.Core
 
         #region Private methods
 
+
+        GameState FindState(SubjectId stateId)
+        {
+            return statesList.FirstOrDefault((x) => x.Id == stateId);
+        }
+
+
         void SetCurrentState(GameState state)
         {
             for (int i = 0; i < statesStack.Count; i++)
@@ -67,9 +93,11 @@ namespace GameFramework.Core
             }
             statesStack.Clear();
             Debug.Log("GameFlow : Set current stage : " + state.GetType().Name);
-
+            for(int i = 0; i < statesList.Count; i++)
+            {
+                statesList[i].gameObject.SetActive(statesList[i] == state);
+            }
             statesStack.Add(state);
-            CurrentState.Initialize();
         }
 
         #endregion

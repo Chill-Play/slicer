@@ -6,32 +6,27 @@ using static GameFramework.Core.UnityLifecycleListener;
 
 public class MovePlayerModule : GameplayModule
 {
+    [SerializeField] DataId inputId;
     DataSupplier<InputInfo> inputInfo = new DataSupplier<InputInfo>();
     float lastInput;
-    public MovePlayerModule(DataId inputData)
-    {
-        inputInfo.Id = inputData;
-    }
 
 
-    public override void Initialize()
+    void OnEnable()
     {
-        base.Initialize();
+        inputInfo.Id = inputId;
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
         player.Animator.SetTrigger("Start");
     }
 
 
-    [LifecycleEvent(typeof(UpdateEvent))]
-    public void Update()
+    void Update()
     {
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
         player.UpdateSpeed();
     }
 
 
-    [LifecycleEvent(typeof(FixedUpdateEvent))]
-    public void FixedUpdate()
+    void FixedUpdate()
     {
         Road road = IoCContainer.Get<EntityService>().GetFirstEntity<Road>();
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();

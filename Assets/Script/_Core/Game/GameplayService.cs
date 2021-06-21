@@ -5,64 +5,64 @@ using UnityEngine;
 
 namespace GameFramework.Core
 {
-    [AutoInitializeService]
-    public class GameplayService : IService
+    //[AutoInitializeService]
+    public class GameplayService //: IService
     {
-        #region Properties
+        //#region Properties
 
-        public List<GameplayModule> GameplayModules { get; private set; } = new List<GameplayModule>();
+        //public List<GameplayModule> GameplayModules { get; private set; } = new List<GameplayModule>();
 
-        #endregion
-
-
-
-        #region IService
-
-        public bool Enabled { get; set; }
-
-        #endregion
+        //#endregion
 
 
 
-        #region IGameplaySystem
+        //#region IService
 
-        public void AddGameplayModule(GameplayModule module)
-        {
-            if (GameplayModules == null)
-            {
-                GameplayModules = new List<GameplayModule>();
-            }
-            GameplayModules.Add(module);
-            module.SetActive(true);
-            if (module.Active)
-            {
-                module.Initialize();
-            }
-            ObjectsLifecycleSystem.Instance.BindLifecycle(module);
-        }
+        //public bool Enabled { get; set; }
+
+        //#endregion
 
 
-        public void RemoveGameplayModule(GameplayModule module)
-        {
-            module.End();
-            GameplayModules.Remove(module);
-            ObjectsLifecycleSystem.Instance.UnbindLifecycle(module);
-        }
+
+        //#region IGameplaySystem
+
+        //public void AddGameplayModule(GameplayModule module)
+        //{
+        //    if (GameplayModules == null)
+        //    {
+        //        GameplayModules = new List<GameplayModule>();
+        //    }
+        //    GameplayModules.Add(module);
+        //    module.SetActive(true);
+        //    if (module.Active)
+        //    {
+        //        module.Initialize();
+        //    }
+        //    ObjectsLifecycleSystem.Instance.BindLifecycle(module);
+        //}
 
 
-        public void Clear()
-        {
-            if (GameplayModules != null)
-            {
-                for (int i = GameplayModules.Count - 1; i >= 0; i--)
-                {
-                    //RemoveGameplayModule(GameplayModules[i]);//.End();
-                    GameplayModules[i].SetActive(false); // refactor
-                }
-                //GameplayModules.Clear();
-            }
-        }
+        //public void RemoveGameplayModule(GameplayModule module)
+        //{
+        //    module.End();
+        //    GameplayModules.Remove(module);
+        //    ObjectsLifecycleSystem.Instance.UnbindLifecycle(module);
+        //}
 
-        #endregion
+
+        //public void Clear()
+        //{
+        //    if (GameplayModules != null)
+        //    {
+        //        for (int i = GameplayModules.Count - 1; i >= 0; i--)
+        //        {
+        //            //RemoveGameplayModule(GameplayModules[i]);//.End();
+        //            GameplayModules[i].SetActive(false); // refactor
+        //        }
+        //        //GameplayModules.Clear();
+        //    }
+        //}
+
+        //#endregion
     }
 }
