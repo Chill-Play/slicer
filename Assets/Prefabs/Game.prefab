@@ -320,6 +320,8 @@ GameObject:
   - component: {fileID: 8567625537607398450}
   - component: {fileID: 8567625537607398448}
   - component: {fileID: 8567625537607398451}
+  - component: {fileID: 1532449063}
+  - component: {fileID: 1532449062}
   m_Layer: 5
   m_Name: Crashed
   m_TagString: Untagged
@@ -443,6 +445,39 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1532449063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625537607398453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbf0eeaef4229743a46fd6d14b8ef58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSequence:
+  - {fileID: 1532449062}
+  zeroScaleOnStart: 1
+--- !u!114 &1532449062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625537607398453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57997d2a9e1cb3479984d16a4b64b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilFirstAppearance: 0
+  scaleValue: 1
+  scaleTime: 1
+  scaleEaseAmplitude: 1.2
+  scaleEasePeriod: 0.5
+  easeType: 24
 --- !u!1 &8567625537612520117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,8 +1268,10 @@ GameObject:
   - component: {fileID: 8567625538274952237}
   - component: {fileID: 8567625538274952235}
   - component: {fileID: 8567625538274952234}
+  - component: {fileID: 894683061}
+  - component: {fileID: 894683060}
   m_Layer: 5
-  m_Name: Crashed
+  m_Name: Finished
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1356,6 +1393,39 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &894683061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625538274952236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbf0eeaef4229743a46fd6d14b8ef58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSequence:
+  - {fileID: 894683060}
+  zeroScaleOnStart: 1
+--- !u!114 &894683060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625538274952236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57997d2a9e1cb3479984d16a4b64b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilFirstAppearance: 0
+  scaleValue: 1
+  scaleTime: 1
+  scaleEaseAmplitude: 1.2
+  scaleEasePeriod: 0.5
+  easeType: 24
 --- !u!1 &8567625538408043847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,6 +2563,9 @@ GameObject:
   - component: {fileID: 8567625539074932822}
   - component: {fileID: 8567625539074932820}
   - component: {fileID: 8567625539074932823}
+  - component: {fileID: 1118631515}
+  - component: {fileID: 1118631516}
+  - component: {fileID: 1118631517}
   m_Layer: 5
   m_Name: Tap to restart
   m_TagString: Untagged
@@ -2616,6 +2689,56 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1118631515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625539074932825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57997d2a9e1cb3479984d16a4b64b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilFirstAppearance: 0
+  scaleValue: 1
+  scaleTime: 1
+  scaleEaseAmplitude: 1.2
+  scaleEasePeriod: 0.5
+  easeType: 24
+--- !u!114 &1118631516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625539074932825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbf0eeaef4229743a46fd6d14b8ef58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSequence:
+  - {fileID: 1118631515}
+  - {fileID: 1118631517}
+  zeroScaleOnStart: 1
+--- !u!114 &1118631517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625539074932825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc500c614cea8a40b76e2ac2beb5a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 0.15
+  duration: 1.5
+  vibrato: 1
+  elasticity: 1
 --- !u!1 &8567625539155260085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,8 +2805,11 @@ GameObject:
   - component: {fileID: 8567625539327175610}
   - component: {fileID: 8567625539327175608}
   - component: {fileID: 8567625539327175611}
+  - component: {fileID: 2033252088}
+  - component: {fileID: 2033252087}
+  - component: {fileID: 2033252086}
   m_Layer: 5
-  m_Name: Tap to restart
+  m_Name: Tap to next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2735,7 +2861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: tap to restart
+  m_text: tap to next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
   m_sharedMaterial: {fileID: 2830636965969884548, guid: 605433b68313d491a8ab88bc03a41651,
@@ -2805,6 +2931,56 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2033252088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625539327175613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbf0eeaef4229743a46fd6d14b8ef58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSequence:
+  - {fileID: 2033252087}
+  - {fileID: 2033252086}
+  zeroScaleOnStart: 1
+--- !u!114 &2033252087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625539327175613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57997d2a9e1cb3479984d16a4b64b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilFirstAppearance: 0
+  scaleValue: 1
+  scaleTime: 1
+  scaleEaseAmplitude: 1.2
+  scaleEasePeriod: 0.5
+  easeType: 24
+--- !u!114 &2033252086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567625539327175613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc500c614cea8a40b76e2ac2beb5a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 0.15
+  duration: 1.5
+  vibrato: 1
+  elasticity: 1
 --- !u!1 &8567625539487176749
 GameObject:
   m_ObjectHideFlags: 0
