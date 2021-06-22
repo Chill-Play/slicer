@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 677899293}
   - component: {fileID: 7023590982538061330}
+  - component: {fileID: 2730394883342414314}
   m_Layer: 0
   m_Name: Lose
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7023590982538061330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677899292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59ec1a4019ae490ebe914c57b47c154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: {fileID: -6088104503955605930, guid: 29dbc3a3bf0cef545a89623caf4938b1, type: 2}
+--- !u!114 &2730394883342414314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,6 +145,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: {fileID: 8402087854279130497, guid: 29dbc3a3bf0cef545a89623caf4938b1, type: 2}
+--- !u!1 &1270933849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270933850}
+  - component: {fileID: 1270933851}
+  m_Layer: 0
+  m_Name: KnifeStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270933850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270933849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8567625537907464519}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1270933851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270933849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037863f5061ed9a47b838dff616d8b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinList:
+  - {fileID: 11400000, guid: f3733f952adefd14cbe1b9d35af73dbc, type: 2}
+  - {fileID: 11400000, guid: 4f43c0a78fee05b4db763fcfc47c9be8, type: 2}
+  - {fileID: 11400000, guid: bceddc70f22e6c741acc20ad66860993, type: 2}
+  - {fileID: 11400000, guid: 3470fbff17450f544935169e42894528, type: 2}
+  - {fileID: 11400000, guid: 87a1d6d33967cb642922c582d7928fe5, type: 2}
+  - {fileID: 11400000, guid: 48b4d6987c18aa54fa38e379f654a1fc, type: 2}
+  - {fileID: 11400000, guid: 6d12354f9a231064ab771437fd387005, type: 2}
+  defaultSkin: {fileID: 11400000, guid: f3733f952adefd14cbe1b9d35af73dbc, type: 2}
 --- !u!1 &1423147750
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2135799398}
   - component: {fileID: 3925896410320342176}
+  - component: {fileID: 607959211587172546}
   m_Layer: 0
   m_Name: Win
   m_TagString: Untagged
@@ -251,6 +318,19 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3925896410320342176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135799397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59ec1a4019ae490ebe914c57b47c154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: {fileID: 2514017134219998208, guid: 29dbc3a3bf0cef545a89623caf4938b1, type: 2}
+--- !u!114 &607959211587172546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -962,6 +1042,7 @@ Transform:
   - {fileID: 8567625537878363941}
   - {fileID: 8567625538910492651}
   - {fileID: 1423147751}
+  - {fileID: 1270933850}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

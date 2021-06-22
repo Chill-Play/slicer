@@ -21,6 +21,7 @@ public class Knife : MonoBehaviour
 
     [SerializeField] Collider sliceCollider;
     [SerializeField] LayerMask itemMask;
+    [SerializeField] GameObject skin;
     [SerializeField] LayerMask groundMask;
     int sliceObjects;
 
@@ -198,6 +199,13 @@ public class Knife : MonoBehaviour
     }
 
 
+    public void SetSkin(KnifeSkin newSkin)
+    {
+        Destroy(skin);
+        skin = Instantiate(newSkin.Blade, transform.position + newSkin.BladeOffset, Quaternion.identity, transform);
+        skin.transform.rotation = Quaternion.LookRotation(newSkin.BladeForwardAxis) * transform.rotation;
+        skin.transform.localScale = newSkin.Blade.transform.localScale;
+    }
 
     public void Kill()
     {

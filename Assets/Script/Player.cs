@@ -17,6 +17,7 @@ public class Player : Entity<Player>
     [SerializeField] Animator animator;
     [SerializeField] bool rotateWithInput;
     [SerializeField] float additionalGravity;
+    KnifeSkin skin;
     Vector3 roadDirection = Vector3.forward;
     Vector3 roadPoint;
 
@@ -31,6 +32,8 @@ public class Player : Entity<Player>
     {
         rigidbody = GetComponent<Rigidbody>();
         targetSpeed = speed;
+        skin = FindObjectOfType<KnifeStorage>().CurrentSkin;
+        Instantiate(skin.Handle, transform.position + skin.HandleOffset, transform.rotation * Quaternion.Euler(skin.Handle.transform.eulerAngles) ,transform);
     }
 
 
@@ -156,7 +159,8 @@ public class Player : Entity<Player>
 
     private void FinishTarget_OnLastFinishTargetHitted()
     {
-        StartCoroutine(WinCoroutine()); //Refactor
+        FinishTarget.OnLastFinishTargetHitted -= FinishTarget_OnLastFinishTargetHitted;
+        StartCoroutine(WinCoroutine()); //Refactor1
         knifeHittedLastTarget = true;
         for (int i = 0; i < knifes.Count; i++)
         {
@@ -219,7 +223,7 @@ public class Player : Entity<Player>
             transform.localPosition = Vector3.Lerp(startLocalPosition, new Vector3(0f, -0.01151f, 0f), t);
         }
         animator.SetTrigger("Throw");
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.45f);
         transform.parent = null;
         t = 0f;
         startPos = transform.position;
@@ -264,6 +268,7 @@ public class Player : Entity<Player>
     public void SpawnKnife()
     {
         Knife instance = Instantiate(knifePrefab, transform.position, Quaternion.identity);
+        instance.SetSkin(skin);
         Bounds newBounds = instance.GetComponent<Collider>().bounds;
         Vector3 offset = Vector3.up * newBounds.size.y / 2f;
         instance.transform.position = transform.position;

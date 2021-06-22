@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8438312404465893022}
   - component: {fileID: 7523082694123370247}
   - component: {fileID: 2039545368895630610}
-  - component: {fileID: 8910071477817162426}
   m_Layer: 0
   m_Name: Sword_03_Blade
   m_TagString: Untagged
@@ -56,7 +55,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,17 +79,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8910071477817162426
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8385228437529317747}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0079986015, y: 0.049883965, z: 0.07874021}
-  m_Center: {x: 5.955699e-23, y: 7.940934e-23, z: -0.0000000055879354}
