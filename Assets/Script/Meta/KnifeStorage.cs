@@ -13,6 +13,10 @@ public class KnifeStorage : MonoBehaviour
     [SerializeField] KnifeSkin defaultSkin;
     List<KnifeSkin> availableSkins = new List<KnifeSkin>();
 
+    float progressToNext = 0.0f;
+
+    public float ProgressToNext => progressToNext;
+
     public KnifeSkin CurrentSkin => availableSkins[availableSkins.Count - 1];
 
     private void Awake()
@@ -29,8 +33,14 @@ public class KnifeStorage : MonoBehaviour
         }
         if(!availableSkins.Contains(defaultSkin))
         {
-            availableSkins.Add(defaultSkin);
+            availableSkins.Insert(0, defaultSkin);
         }
+    }
+
+
+    public void OpenNextSkin()
+    {
+        AddSkin(GetNextSkin());
     }
 
 
@@ -41,7 +51,7 @@ public class KnifeStorage : MonoBehaviour
     }
 
 
-    public KnifeSkin NextSkin()
+    public KnifeSkin GetNextSkin()
     {
         for(int i = 0; i < skinList.Count; i++)
         {

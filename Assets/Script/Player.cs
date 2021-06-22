@@ -159,7 +159,8 @@ public class Player : Entity<Player>
 
     private void FinishTarget_OnLastFinishTargetHitted()
     {
-        StartCoroutine(WinCoroutine()); //Refactor
+        FinishTarget.OnLastFinishTargetHitted -= FinishTarget_OnLastFinishTargetHitted;
+        StartCoroutine(WinCoroutine()); //Refactor1
         knifeHittedLastTarget = true;
         for (int i = 0; i < knifes.Count; i++)
         {

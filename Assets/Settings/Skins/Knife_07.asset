@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 
   handle: {fileID: 5905590074918366214, guid: 961fefce4498a194f8631bc1a2cf360e, type: 3}
   blade: {fileID: 1198184576432502405, guid: 5bfec98e1ec4ed0459b47f2de402b6ee, type: 3}
-  handleOffset: {x: 0, y: 0, z: 0}
-  bladeOffset: {x: 0, y: 0, z: 0}
+  handleOffset: {x: 0, y: -1.7, z: 0}
+  bladeOffset: {x: 0, y: 1, z: 0}
   bladeForwardAxis: {x: 1, y: 0, z: 0}
