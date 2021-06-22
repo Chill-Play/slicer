@@ -108,13 +108,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliceVelocity: 25
-  maxPenetration: 1
+  maxPenetration: 0.9
   randomAngularVelocityMultiplier: 1
   sliceAngularVelocity: 0
   penetrationStep: 0.2
   partPrefab: {fileID: 252317108469241861, guid: 72f5b0b06099cfb4bbdef0c063c11803,
     type: 3}
   inverseLeftPartVelocity: 0
+  windDragSettings: {fileID: 0}
 --- !u!114 &-6169609803161995992
 MonoBehaviour:
   m_ObjectHideFlags: 0
