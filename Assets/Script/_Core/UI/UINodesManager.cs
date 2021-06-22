@@ -201,7 +201,7 @@ public class UINodesManager : MonoBehaviour
                 }
             }
         }
-        animation.Play(nodeTransforms, onAnimationEndCallback);
+        animation.Play(nodeTransforms.GetEnumerator(), onAnimationEndCallback);
     }
 
     public void RunAnimationsSequence(UIScreen screen, List<UIAnimationJoinStruct> animationsSequence, System.Action onSequenceEnd = null)

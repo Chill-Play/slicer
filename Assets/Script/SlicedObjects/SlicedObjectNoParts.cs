@@ -9,7 +9,7 @@ public class SlicedObjectNoParts : MonoBehaviour, ISlicable
 
     [SerializeField] float maxPenetration = 1f;
 
-    public bool TryToSlice(float penetration)
+    public bool TryToSlice(float penetration, Vector3 pos, Vector3 knifeRight)
     {
         if (penetration > maxPenetration)
         {

@@ -25,7 +25,7 @@ public class SlicedMoney : MonoBehaviour, ISlicable
     }
 
 
-    public bool TryToSlice(float penetration)
+    public bool TryToSlice(float penetration, Vector3 pos, Vector3 knifeRight)
     {
         bool sliced = false;
         if (penetration > maxPenetration)

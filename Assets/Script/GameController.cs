@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
         OnGameStart?.Invoke();
     }
 
+    public void FinishGame()
+    {      
+        OnWin?.Invoke();
+    }
 
 
     // Update is called once per frame
@@ -49,8 +53,8 @@ public class GameController : MonoBehaviour
         levelProgress = player.transform.position.z / finish.transform.position.z;
         if(levelProgress >= 1f && player.enabled)
         {
-            player.enabled = false;
-            OnWin?.Invoke();
+           // player.enabled = false;
+            player.Finish();
         }
     }
 }
