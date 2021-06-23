@@ -8,9 +8,11 @@ using UnityEngine;
 public class KnifeStorage : MonoBehaviour
 {
     const string SKIN_ITEM_CATEGORY = "Knife_Skin";
+    const string PROGRESS_PREFS = "G_KnifeSkinProgess";
 
     [SerializeField] List<KnifeSkin> skinList;
     [SerializeField] KnifeSkin defaultSkin;
+    [SerializeField] float progressPerLevel = 0.02f;
     List<KnifeSkin> availableSkins = new List<KnifeSkin>();
 
     float progressToNext = 0.0f;
@@ -38,6 +40,21 @@ public class KnifeStorage : MonoBehaviour
     }
 
 
+    public void AddSkinProgress(out float oldProgress, out float newProgress)
+    {
+        progressToNext = PlayerPrefs.GetFloat(PROGRESS_PREFS, 0f);
+        oldProgress = progressToNext;
+        progressToNext += progressPerLevel;
+        if(progressToNext >= 1f)
+        {
+            OpenNextSkin();
+            progressToNext = 0f;
+        }
+        PlayerPrefs.SetFloat(PROGRESS_PREFS, progressToNext);
+        newProgress = progressToNext;
+    }
+
+
     public void OpenNextSkin()
     {
         AddSkin(GetNextSkin());
@@ -45,7 +62,7 @@ public class KnifeStorage : MonoBehaviour
 
 
     public void AddSkin(KnifeSkin skin)
-    {               
+    {
         PlayerInfo.Instance.inventory.AddItem(skin.Id, SKIN_ITEM_CATEGORY);
         PlayerInfo.Instance.inventory.SaveItems();
     }

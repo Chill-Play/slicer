@@ -168,8 +168,42 @@ public class Player : Entity<Player>
                 knifes[i].OnStartSlice += Knife_OnStartSlice;
             }
         }
-        StartCoroutine(FinishCoroutine());
+        if (knifes.Count > 0)
+        {
+            StartCoroutine(FinishCoroutine());
+        }
+        else
+        {
+            StartCoroutine(NoKnifesCoroutine());
+        }
     }
+
+
+    IEnumerator NoKnifesCoroutine()
+    {
+        float t = 0;
+        while (t < 1f)
+        {
+            yield return new WaitForEndOfFrame();
+            t += Time.deltaTime;
+            transform.position += roadDirection * Mathf.Lerp(speed, 0f, t) * Time.deltaTime;
+        }
+
+        t = 0;
+        Vector3 startPos = animator.transform.localPosition;
+        Quaternion startRot = animator.transform.localRotation;
+        while (t < 1f)
+        {
+            yield return new WaitForEndOfFrame();
+            t += Time.deltaTime * 4f;
+            animator.transform.localPosition = Vector3.Lerp(startPos, new Vector3(-0.672f, -0.3f, -0.06f), t);
+            animator.transform.localRotation = Quaternion.Lerp(startRot, Quaternion.identity, t);
+        }
+        animator.SetTrigger("Defeated");
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(WinCoroutine());
+    }
+
 
     private void FinishTarget_OnLastFinishTargetHitted()
     {
@@ -198,7 +232,7 @@ public class Player : Entity<Player>
         jumpSpeed *= knifes.Count;
         Vector3 playerSpeed = jumpSpeed + (Vector3.forward * speed);
         Vector3 playerAcceleration = Vector3.zero;
-        Vector3 startAngle = transform.eulerAngles;
+        Quaternion animatorStartRotation = animator.transform.localRotation;
         Vector3 startOffset = animator.transform.position - startPos.SetY(0f);
         while (animator.transform.position.y > 0f)
         {
@@ -217,6 +251,7 @@ public class Player : Entity<Player>
             Vector3 currentOffset = startPos.SetY(0) - animator.transform.position;
             animator.transform.position += (currentOffset.normalized) * (currentOffset.magnitude - startOffset.magnitude);
             transform.RotateAround(startPos.SetY(0f), Vector3.right, angle);
+            animator.transform.localRotation = Quaternion.Lerp(animatorStartRotation, Quaternion.identity, (startPos.y - transform.position.y) / startPos.y - 5f);
             transform.up = transform.position - startPos.SetY(0f);
         }
         animator.GetComponentInChildren<InverseKinematics>().enabled = false;
@@ -236,7 +271,7 @@ public class Player : Entity<Player>
             transform.localPosition = Vector3.Lerp(startLocalPosition, new Vector3(0f, -0.01151f, 0f), t);
         }
         animator.SetTrigger("Throw");
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.45f);
         transform.parent = null;
         t = 0f;
         startPos = transform.position;
