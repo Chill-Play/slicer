@@ -6,11 +6,35 @@ using UnityEngine;
 public class TestGameSetup : MonoBehaviour
 {
     [SerializeField] DataId inputId;
+
+    List<GameplayModule> gameplayModules = new List<GameplayModule>();
+    GameplayService gameplayService;
+    public static TestGameSetup instance;
+
     void Start()
     {
-        GameplayService gameplayService = IoCContainer.Get<GameplayService>();
-        gameplayService.AddGameplayModule(new MovePlayerModule(inputId));
-        gameplayService.AddGameplayModule(new KnifeSpawningModule());
-        gameplayService.AddGameplayModule(new KillPlayerModule());
+        instance = this;
+
+        gameplayService = IoCContainer.Get<GameplayService>();
+
+        gameplayModules.Add(new MovePlayerModule(inputId));
+        gameplayModules.Add(new KnifeSpawningModule());
+        gameplayModules.Add(new KillPlayerModule());
+
+        for (int i = 0; i < gameplayModules.Count; i++)
+        {
+            gameplayService.AddGameplayModule(gameplayModules[i]);            
+        }
+    }
+
+    public void RemoveGameplayModule<T>()
+    {
+        for (int i = 0; i < gameplayModules.Count; i++)
+        {
+            if (gameplayModules[i] is T)
+            {
+                gameplayService.RemoveGameplayModule(gameplayModules[i]);
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ public class Finish : MonoBehaviour
     public void CalculateLastTarget(int knifeCount)
     {
         int lastTarget = Mathf.Clamp(targets.Length - knifeCount, 0, targets.Length - 1);
-        Debug.Log(targets[lastTarget].name);
+        Debug.Log("CalculateLastTarget " + targets[lastTarget].name);
         targets[lastTarget].SetAsLastFinishTarget();
     }
 

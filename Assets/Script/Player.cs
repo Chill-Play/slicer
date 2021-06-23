@@ -73,16 +73,19 @@ public class Player : Entity<Player>
 
     public void SpawnKnife()
     {
-        Knife instance = Instantiate(knifePrefab, transform.position, Quaternion.identity);
-        Bounds newBounds = instance.GetComponent<Collider>().bounds;
-        Vector3 offset = Vector3.up * newBounds.size.y / 2f;
-        instance.transform.position = transform.position;
-        transform.position += offset * 2.2f;
-        instance.GetComponent<Joint>().connectedBody = rigidbody;
-        instance.Player = this;
-        instance.CanSlice = true;
-        //instance.transform.parent = transform;
-        knifes.Add(instance);
+        if (!Finished)
+        {
+            Knife instance = Instantiate(knifePrefab, transform.position, Quaternion.identity);
+            Bounds newBounds = instance.GetComponent<Collider>().bounds;
+            Vector3 offset = Vector3.up * newBounds.size.y / 2f;
+            instance.transform.position = transform.position;
+            transform.position += offset * 2.2f;
+            instance.GetComponent<Joint>().connectedBody = rigidbody;
+            instance.Player = this;
+            instance.CanSlice = true;
+            //instance.transform.parent = transform;
+            knifes.Insert(0, instance);
+        }
     }
 
 
@@ -138,7 +141,8 @@ public class Player : Entity<Player>
         if (Finished)
             return;
         Finished = true;
-        FinishTarget.OnLastFinishTargetHitted += FinishTarget_OnLastFinishTargetHitted;
+        //TestGameSetup.instance.RemoveGameplayModule<KnifeSpawningModule>();
+        FinishTarget.OnLastFinishTargetHitted += FinishTarget_OnLastFinishTargetHitted;       
         FindObjectOfType<Finish>().CalculateLastTarget(knifes.Count);
         rigidbody.isKinematic = true;
         rigidbody.constraints = RigidbodyConstraints.None;
@@ -149,7 +153,7 @@ public class Player : Entity<Player>
             animator.transform.parent = null;
             knifes[i].transform.parent = transform;
             knifes[i].Disable();
-            if (i < knifes.Count - 1)
+            if (i > 0)
             {
                 knifes[i].CanSlice = true;
                 knifes[i].DestroyOnSlice = true;
@@ -164,18 +168,18 @@ public class Player : Entity<Player>
     }
 
     private void FinishTarget_OnLastFinishTargetHitted()
-    {     
-        StartCoroutine(WinCoroutine()); //Refactor
+    {
+        FinishTarget.OnLastFinishTargetHitted -= FinishTarget_OnLastFinishTargetHitted;
         knifeHittedLastTarget = true;
         for (int i = 0; i < knifes.Count; i++)
         {
             knifes[i].CanSlice = false;
-        }
+        }       
     }
 
     private void Knife_OnStartSlice()
     {       
-        knifeHittedLastTarget = true;
+        knifeHittedLastTarget = true;  
     }
 
 
