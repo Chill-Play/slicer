@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SlicedMoney : MonoBehaviour, ISlicable
 {
+    public static event System.Action OnSliceGlobal;
     [SerializeField] float sliceVelocity;
     [SerializeField] float maxPenetration = 1f;
     [SerializeField] float randomAngularVelocityMultiplier = 0.0f;
@@ -33,6 +34,7 @@ public class SlicedMoney : MonoBehaviour, ISlicable
             Destroy(gameObject);
             sliced = true;
             OnSlice?.Invoke();
+            OnSliceGlobal?.Invoke();
         }
         else
         {

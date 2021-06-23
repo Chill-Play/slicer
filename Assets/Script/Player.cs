@@ -20,6 +20,7 @@ public class Player : Entity<Player>
     float currentSpeed;
     float targetSpeed;
     Rigidbody rigidbody;
+    KnifeSkin skin;
 
     public bool Finished { get; set; }
     public Animator Animator => animator;
@@ -28,12 +29,14 @@ public class Player : Entity<Player>
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        skin = FindObjectOfType<KnifeStorage>().CurrentSkin;
+        Instantiate(skin.Handle, transform.position + skin.HandleOffset, transform.rotation * Quaternion.Euler(skin.Handle.transform.eulerAngles), transform);
         targetSpeed = speed;
     }
 
 
     public void UpdateSpeed()
-    {
+    {     
         bool slicing = false;
         for (int i = 0; i < knifes.Count; i++)
         {
@@ -58,7 +61,7 @@ public class Player : Entity<Player>
     // Update is called once per frame
     public void Move(float input)
     {
-        if (!this.enabled)
+        if (!this.enabled || Finished)
         {
             return;
         }
@@ -72,10 +75,9 @@ public class Player : Entity<Player>
 
 
     public void SpawnKnife()
-    {
-        if (!Finished)
-        {
+    {        
             Knife instance = Instantiate(knifePrefab, transform.position, Quaternion.identity);
+            instance.SetSkin(skin);
             Bounds newBounds = instance.GetComponent<Collider>().bounds;
             Vector3 offset = Vector3.up * newBounds.size.y / 2f;
             instance.transform.position = transform.position;
@@ -84,8 +86,7 @@ public class Player : Entity<Player>
             instance.Player = this;
             instance.CanSlice = true;
             //instance.transform.parent = transform;
-            knifes.Insert(0, instance);
-        }
+            knifes.Insert(0, instance);       
     }
 
 
@@ -99,6 +100,9 @@ public class Player : Entity<Player>
 
     public void Kill()
     {
+        //enabled = false;
+        Finished = true;
+        //TestGameSetup.instance.RemoveGameplayModule<KnifeSpawningModule>();
         RagdollController ragdoll = GetComponentInChildren<RagdollController>();
         ragdoll.SetRagdollActive(true);
         ragdoll.transform.parent = null;

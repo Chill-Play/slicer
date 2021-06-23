@@ -6,17 +6,18 @@ using static GameFramework.Core.UnityLifecycleListener;
 
 public class MovePlayerModule : GameplayModule
 {
+    [SerializeField] DataId inputId;
     DataSupplier<InputInfo> inputInfo = new DataSupplier<InputInfo>();
     float lastInput;
-    public MovePlayerModule(DataId inputData)
-    {
-        inputInfo.Id = inputData;
-    }
 
+    void OnEnable()
+    {
+        inputInfo.Id = inputId;        
+    }
 
     [LifecycleEvent(typeof(UpdateEvent))]
     public void Update()
-    {
+    {     
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
         player.UpdateSpeed();
     }

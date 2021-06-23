@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class SlicedObject : MonoBehaviour, ISlicable
 {
+    public static event System.Action OnSliceGlobal;
     [SerializeField] float sliceVelocity;
     [SerializeField] float penetrationRotation = 30f;
     [SerializeField] float maxPenetration = 1f;
@@ -38,6 +39,7 @@ public class SlicedObject : MonoBehaviour, ISlicable
             Destroy(this);
             sliced = true;
             OnSlice?.Invoke();
+            OnSliceGlobal?.Invoke();            
         }
         else
         {

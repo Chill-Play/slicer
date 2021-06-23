@@ -11,11 +11,16 @@ public class TestGameSetup : MonoBehaviour
     GameplayService gameplayService;
     public static TestGameSetup instance;
 
-    void Start()
+    private void Awake()
     {
         instance = this;
+    }
 
-        gameplayService = IoCContainer.Get<GameplayService>();
+    public void RunGame()
+    {
+        /*gameplayService = IoCContainer.Get<GameplayService>();
+
+        gameplayService.Clear();
 
         gameplayModules.Add(new MovePlayerModule(inputId));
         gameplayModules.Add(new KnifeSpawningModule());
@@ -24,7 +29,7 @@ public class TestGameSetup : MonoBehaviour
         for (int i = 0; i < gameplayModules.Count; i++)
         {
             gameplayService.AddGameplayModule(gameplayModules[i]);            
-        }
+        }*/
     }
 
     public void RemoveGameplayModule<T>()
@@ -33,7 +38,9 @@ public class TestGameSetup : MonoBehaviour
         {
             if (gameplayModules[i] is T)
             {
-                gameplayService.RemoveGameplayModule(gameplayModules[i]);
+                //gameplayService.RemoveGameplayModule(gameplayModules[i]);
+                gameplayModules.RemoveAt(i);
+                break;
             }
         }
     }
