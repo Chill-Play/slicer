@@ -43,7 +43,6 @@ public class GameController : MonoBehaviour
     public void FinishGame()
     {
         FindObjectOfType<GameFlowController>().MoveToState(winStateId);
-        FindObjectOfType<KnifeStorage>().OpenNextSkin();
         OnWin?.Invoke();
     }
 

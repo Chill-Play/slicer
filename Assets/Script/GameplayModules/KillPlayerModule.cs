@@ -15,14 +15,11 @@ public class KillPlayerModule : GameplayModule
 
     private void Player_OnCollision()
     {
-        if (!playerKilled)
+        Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
+        if (!player.Finished)
         {
-            Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
-            if (!player.Finished)
-            {
-                player.Kill();
-                playerKilled = true;
-            }
+            player.Kill();
+            playerKilled = true;
         }
     }
 
