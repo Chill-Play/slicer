@@ -15,6 +15,7 @@ public class Player : Entity<Player>
     [SerializeField] Knife knifePrefab;
     [SerializeField] List<Knife> knifes;
     [SerializeField] LayerMask groundMask;
+    [SerializeField] float onKillPushBackPower = 5f; 
     Vector3 roadDirection = Vector3.forward;
 
     float currentSpeed;
@@ -111,6 +112,8 @@ public class Player : Entity<Player>
             knifes[i].Kill();
         }
         rigidbody.velocity = Vector3.zero;
+        ragdoll.Push(Vector3.back * onKillPushBackPower, ragdoll.transform.position);
+
         OnDie?.Invoke();
         //Destroy(this);
     }

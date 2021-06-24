@@ -298,11 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e06650683c0f39409bfbf14e9402b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliceVelocity: 0
+  sliceVelocity: 1
   penetrationRotation: 30
   maxPenetration: 0
   randomAngularVelocityMultiplier: 0
-  sliceAngularVelocity: 0
+  sliceAngularVelocity: -3
   dragSettings: {fileID: 11400000, guid: 394d367aea956a840940318983029d47, type: 2}
   addScore: 1
   inverseLeftPartVelocity: 0
