@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4633715672730201
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600945494347341}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6879398396536030045}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (8) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6879398396536030045
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600945494347341}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4633715672730201}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148876083683457}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602600946489157295
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,36 +137,6 @@ MonoBehaviour:
   - {fileID: 2937758360975894567}
   - {fileID: 2937758362133849317}
   multipliers: 6400000032000000190000000a000000050000000200000001000000
---- !u!1 &819221652444703740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946738228937}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6935618723534726280}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (5) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6935618723534726280
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946738228937}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819221652444703740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877586012698}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327477409244442482
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +149,7 @@ GameObject:
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -226,366 +166,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 602600947145582109}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2183538256983398123
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946848674863}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5429123679232658405}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (9) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5429123679232658405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946848674863}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183538256983398123}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148876083683457}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2247593727938751141
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600945484229818}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1677531688933408007}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (12) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1677531688933408007
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600945484229818}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2247593727938751141}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1141212957114059679}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3771455870825017294
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600947597525097}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7004782876806949934}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7004782876806949934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600947597525097}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3771455870825017294}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877636627097}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3910637080922777637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946968221290}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7556053445324744036}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (1) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7556053445324744036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946968221290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3910637080922777637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877636627097}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4522963263838543800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600945601894245}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5996357113991680618}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (2) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5996357113991680618
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600945601894245}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4522963263838543800}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148876379055707}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4830119269063954086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946071879440}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6663632740083814114}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (6) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6663632740083814114
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946071879440}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4830119269063954086}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877210288651}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6387657843605331353
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946298812676}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1218765642285897216}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (11) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1218765642285897216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946298812676}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6387657843605331353}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877622497303}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8168808476111666267
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600947507867795}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 203805089381702352}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (4) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &203805089381702352
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600947507867795}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168808476111666267}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877586012698}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8174016127610025577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946967272682}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2971671173357471787}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (7) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2971671173357471787
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946967272682}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174016127610025577}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877210288651}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8432104533284158498
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946598811314}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9107204637677514387}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (13) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9107204637677514387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946598811314}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8432104533284158498}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1141212957114059679}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8455773271458980081
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600947305807199}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 858152062291581140}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (3) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &858152062291581140
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600947305807199}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8455773271458980081}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148876379055707}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &9118345265844551850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946151450818}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3085557923849601834}
-  m_Layer: 0
-  m_Name: ConfettiDirectionalRainbow (10) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3085557923849601834
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 602600946151450818}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9118345265844551850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3409148877622497303}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &602600945484229818
 PrefabInstance:
@@ -1485,6 +1065,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
+--- !u!4 &3409148877210288651 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 602600946263110666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4540919301650348388 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3988017003834559854, guid: 8a182537b6394cf45a6472e530ea0ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 602600946263110666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2937758361742118007 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2349152722516785277, guid: 8a182537b6394cf45a6472e530ea0ff3,
@@ -1497,18 +1089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9875cb21122fba41b20821cc225aa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &4540919301650348388 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3988017003834559854, guid: 8a182537b6394cf45a6472e530ea0ff3,
-    type: 3}
-  m_PrefabInstance: {fileID: 602600946263110666}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3409148877210288651 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
-    type: 3}
-  m_PrefabInstance: {fileID: 602600946263110666}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &602600946294762523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1807,15 +1387,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9875cb21122fba41b20821cc225aa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &3409148877636627097 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
-    type: 3}
-  m_PrefabInstance: {fileID: 602600946377874584}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &4540919301807018486 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3988017003834559854, guid: 8a182537b6394cf45a6472e530ea0ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 602600946377874584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3409148877636627097 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
     type: 3}
   m_PrefabInstance: {fileID: 602600946377874584}
   m_PrefabAsset: {fileID: 0}
@@ -1903,6 +1483,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
+--- !u!23 &4540919301791787896 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3988017003834559854, guid: 8a182537b6394cf45a6472e530ea0ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 602600946388002326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3409148877622497303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
@@ -1921,12 +1507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9875cb21122fba41b20821cc225aa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &4540919301791787896 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3988017003834559854, guid: 8a182537b6394cf45a6472e530ea0ff3,
-    type: 3}
-  m_PrefabInstance: {fileID: 602600946388002326}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &602600946598811314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3027,6 +2607,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a182537b6394cf45a6472e530ea0ff3, type: 3}
+--- !u!4 &3409148876379055707 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 602600947501748314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2937758360975894567 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2349152722516785277, guid: 8a182537b6394cf45a6472e530ea0ff3,
@@ -3042,12 +2628,6 @@ MonoBehaviour:
 --- !u!23 &4540919300950662452 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3988017003834559854, guid: 8a182537b6394cf45a6472e530ea0ff3,
-    type: 3}
-  m_PrefabInstance: {fileID: 602600947501748314}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3409148876379055707 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
     type: 3}
   m_PrefabInstance: {fileID: 602600947501748314}
   m_PrefabAsset: {fileID: 0}
@@ -3314,12 +2894,6 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 2937758360910593438}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1141212957114059679 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2937758360910593438}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &602600947595822563 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2349152722516785277, guid: 8a182537b6394cf45a6472e530ea0ff3,
@@ -3332,3 +2906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9875cb21122fba41b20821cc225aa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1141212957114059679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2815704732882515457, guid: 8a182537b6394cf45a6472e530ea0ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2937758360910593438}
+  m_PrefabAsset: {fileID: 0}
