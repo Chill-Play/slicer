@@ -18,6 +18,7 @@ public class Player : Entity<Player>
     [SerializeField] bool rotateWithInput;
     [SerializeField] float additionalGravity;
     KnifeSkin skin;
+    Vector3 localVelocity;
     Vector3 roadDirection = Vector3.forward;
     Vector3 roadPoint;
 
@@ -69,6 +70,9 @@ public class Player : Entity<Player>
     // Update is called once per frame
     Vector3 lastRoadPoint;
     Vector3 lastPosition;
+    Vector3 smoothedVelocity;
+    Vector3 smoothedVelocityVelocity;
+    Vector3 lastVelocity;
     float angleSmoothVelocity;
     public void Move(float input, Vector3 direction, Vector3 roadPoint,float roadWidth)
     {
@@ -124,7 +128,16 @@ public class Player : Entity<Player>
         lastRoadPoint = projectedRoadPoint;
         velocity.y = rigidbody.velocity.y;
         rigidbody.velocity = velocity;
+        localVelocity = transform.InverseTransformVector(velocity);
+        Vector3 animationVelocity = (rigidbody.position - lastPosition) / Time.fixedDeltaTime;
+        smoothedVelocityVelocity = -(smoothedVelocity + (animationVelocity - lastVelocity) * 2f);
+        smoothedVelocityVelocity = Vector3.ClampMagnitude(smoothedVelocityVelocity, 4f);
+        Vector3 damping = -(0.7f) *smoothedVelocityVelocity;
+        smoothedVelocity += (smoothedVelocityVelocity + damping) * Time.fixedDeltaTime * 20f;
+        animator.SetFloat("VelocityY", smoothedVelocity.y);
+        animator.SetFloat("VelocityX", smoothedVelocity.x);
         lastPosition = rigidbody.position;
+        lastVelocity = animationVelocity;
     }
 
 
@@ -357,11 +370,9 @@ public class Player : Entity<Player>
         GameObject collisionGO = collision.collider.gameObject;
         if (groundMask == (groundMask | (1 << collisionGO.gameObject.layer)))
         {
-            float upDot = Vector3.Dot(collision.contacts[0].normal, Vector3.up);
-            float downDot = Vector3.Dot(collision.contacts[0].normal, Vector3.down);
-            if (upDot < 0.3f || downDot > 0.5f)
+            if (Vector3.Dot(collision.contacts[0].normal, -transform.forward) > 0.5f)
             {
-                OnCollision?.Invoke();
+                Kill();
             }
         }
     }

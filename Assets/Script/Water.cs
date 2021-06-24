@@ -49,7 +49,10 @@ public class Water : MonoBehaviour
         {
             WaterBody body = new WaterBody();
             Vector3 point = other.ClosestPoint(trigger.bounds.center);
-            Instantiate(vfx, point, Quaternion.identity);
+            if (vfx != null)
+            {
+                Instantiate(vfx, point, Quaternion.identity);
+            }
             body.collider = other;
             body.rigidbody = other.attachedRigidbody;
             bodies.Add(body);
