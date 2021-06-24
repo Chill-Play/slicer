@@ -5,6 +5,7 @@ using UnityEngine;
 public class RagdollController : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    Rigidbody[] rigidbodies;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,18 @@ public class RagdollController : MonoBehaviour
     public void SetRagdollActive(bool active)
     {
         animator.enabled = !active;
-        Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
+        rigidbodies = GetComponentsInChildren<Rigidbody>();
         for(int i = 0; i < rigidbodies.Length; i++)
         {
             rigidbodies[i].isKinematic = !active;
+        }
+    }
+
+    public void Push(Vector3 push, Vector3 point)
+    {
+        foreach (var rb in rigidbodies)
+        {
+            rb.AddForceAtPosition(push, point, ForceMode.VelocityChange);
         }
     }
 }
