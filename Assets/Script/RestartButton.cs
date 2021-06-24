@@ -13,6 +13,7 @@ public class RestartButton : MonoBehaviour
     // Update is called once per frame
     public void Restart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        int sceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
     }
 }
