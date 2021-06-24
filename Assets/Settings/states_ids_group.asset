@@ -29,6 +29,7 @@ MonoBehaviour:
   - {fileID: 7477332230851142650}
   - {fileID: 2514017134219998208}
   - {fileID: -6088104503955605930}
+  - {fileID: 3816325023644774823}
 --- !u!114 &2514017134219998208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +41,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30bfdd305b6dc1f4384f9aa63675ad85, type: 3}
   m_Name: Win
+  m_EditorClassIdentifier: 
+--- !u!114 &3816325023644774823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bfdd305b6dc1f4384f9aa63675ad85, type: 3}
+  m_Name: GameFinish
   m_EditorClassIdentifier: 
 --- !u!114 &7477332230851142650
 MonoBehaviour:

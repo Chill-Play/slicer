@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 29dbc3a3bf0cef545a89623caf4938b1
 labels:
-- Lose
+- GameFinish
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

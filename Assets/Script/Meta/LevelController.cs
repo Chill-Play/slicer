@@ -20,6 +20,7 @@ public class LevelController : MonoBehaviour
 
     public void NextLevel()
     {
+        Debug.Log("NextLevel");
         int level = currentLevel + 1;
         PlayerPrefs.SetInt(LEVEL_NUMBER_PREFS, level);
         SceneReference scene = sequence.GetScene(level);

@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] SubjectId gameStateId;
     [SerializeField] SubjectId winStateId;
     [SerializeField] SubjectId loseStateId;
+    [SerializeField] SubjectId gameFinishStateId;
 
     float levelProgress;
     bool gameStarted;
@@ -61,9 +62,9 @@ public class GameController : MonoBehaviour
 
 
         levelProgress = player.transform.position.z / finish.transform.position.z;
-        if(levelProgress >= 1f && player.enabled)
+        if(levelProgress >= 1f && !player.Finished)
         {
-           // player.enabled = false;
+            FindObjectOfType<GameFlowController>().MoveToState(gameFinishStateId);
             player.Finish();
         }
     }
