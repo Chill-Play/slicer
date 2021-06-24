@@ -13,9 +13,45 @@ MonoBehaviour:
   m_Name: level_sequence
   m_EditorClassIdentifier: 
   scenes:
-  - sceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    scenePath: Assets/Scenes/SampleScene.unity
-  - sceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    scenePath: Assets/Scenes/SampleScene.unity
-  - sceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    scenePath: Assets/Scenes/SampleScene.unity
+  - sceneAsset: {fileID: 102900000, guid: 3ce7571c5f406b748a83a22d71eedc6a, type: 3}
+    scenePath: Assets/Scenes/Level 0.unity
+  - sceneAsset: {fileID: 102900000, guid: 03c88496a55c671469e2905d86b76e9e, type: 3}
+    scenePath: Assets/Scenes/Level 1.unity
+  - sceneAsset: {fileID: 102900000, guid: c58627c89f0af6145abc80144c5a11bf, type: 3}
+    scenePath: Assets/Scenes/Level 2.unity
+  - sceneAsset: {fileID: 102900000, guid: 7f0989ca746df344cb2103401b21d896, type: 3}
+    scenePath: Assets/Scenes/Level 3.unity
+  - sceneAsset: {fileID: 102900000, guid: 427aab6ad01fae94a98347b8b1cd2730, type: 3}
+    scenePath: Assets/Scenes/Level 4.unity
+  - sceneAsset: {fileID: 102900000, guid: 5390dfd4218fe5940bfbc372fbddc2fa, type: 3}
+    scenePath: Assets/Scenes/Level 5.unity
+  - sceneAsset: {fileID: 102900000, guid: 0901e216530fb9041891dc312ed5237e, type: 3}
+    scenePath: Assets/Scenes/Level 6.unity
+  - sceneAsset: {fileID: 102900000, guid: 5187ddfedc8ee89498a25277af264bc1, type: 3}
+    scenePath: Assets/Scenes/Level 7.unity
+  - sceneAsset: {fileID: 102900000, guid: b0c5a13a656e3194f81fa3b837651dd4, type: 3}
+    scenePath: Assets/Scenes/Level 8.unity
+  - sceneAsset: {fileID: 102900000, guid: 2769f2733e9d63647a275bcc3653c7d2, type: 3}
+    scenePath: Assets/Scenes/Level 9.unity
+  - sceneAsset: {fileID: 102900000, guid: 8458491d9455524498411413030ad17c, type: 3}
+    scenePath: Assets/Scenes/Level 10.unity
+  - sceneAsset: {fileID: 102900000, guid: b3d79d125d9775f4a839e1ec83cf1fe5, type: 3}
+    scenePath: Assets/Scenes/Level 11.unity
+  - sceneAsset: {fileID: 102900000, guid: a9c160fc2a141f246bfb3a3c653b36f4, type: 3}
+    scenePath: Assets/Scenes/Level 12.unity
+  - sceneAsset: {fileID: 102900000, guid: a897ddf33aea35b4c83b57de33c91fba, type: 3}
+    scenePath: Assets/Scenes/Level 13.unity
+  - sceneAsset: {fileID: 102900000, guid: 8ac4f991def040c45945ecdc73b9f8f3, type: 3}
+    scenePath: Assets/Scenes/Level 14.unity
+  - sceneAsset: {fileID: 102900000, guid: 2755268a250122d4a87eb9df7fb263ff, type: 3}
+    scenePath: Assets/Scenes/Level 15.unity
+  - sceneAsset: {fileID: 102900000, guid: dac199d4d5e875c4ab7264849c408752, type: 3}
+    scenePath: Assets/Scenes/Level 16.unity
+  - sceneAsset: {fileID: 102900000, guid: 7baa1e9a259a2f649af797fd0a3fc5b2, type: 3}
+    scenePath: Assets/Scenes/Level 17.unity
+  - sceneAsset: {fileID: 102900000, guid: 63daefad087cc9b42b707c15fd35f483, type: 3}
+    scenePath: Assets/Scenes/Level 18.unity
+  - sceneAsset: {fileID: 102900000, guid: 9d249192a4276534fbaf65693e104d00, type: 3}
+    scenePath: Assets/Scenes/Level 19.unity
+  - sceneAsset: {fileID: 102900000, guid: 81a3fb0cb50c3af4b8d7640a98ccf41c, type: 3}
+    scenePath: Assets/Scenes/Level 20.unity
