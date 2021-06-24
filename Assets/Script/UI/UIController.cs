@@ -8,6 +8,9 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject gameScreen;
     [SerializeField] GameObject loseScreen;
     [SerializeField] GameObject winScreen;
+    [SerializeField] GameObject tutorialScreen;
+    [SerializeField] TutorialInput tutorialInput;
+
     GameController gameController;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,21 @@ public class UIController : MonoBehaviour
         gameController.OnGameStart += GameController_OnGameStart;
         gameController.OnWin += GameController_OnWin;
         gameController.OnLose += GameController_OnLose;
+        gameController.OnTutorialStart += GameController_OnTutorialStart;
+        gameController.OnTutorialEnd += GameController_OnTutorialEnd; ;
+    }
+
+    private void GameController_OnTutorialEnd()
+    {
+       // gameScreen.gameObject.SetActive(true);
+        tutorialScreen.gameObject.SetActive(false);
+    }
+
+    private void GameController_OnTutorialStart(TutorialPoint.TutorialPointInfo tutorialPointInfo)
+    {
+        //gameScreen.gameObject.SetActive(false);
+        tutorialScreen.gameObject.SetActive(true);
+        tutorialInput.Setup(tutorialPointInfo);
     }
 
     private void GameController_OnLose()

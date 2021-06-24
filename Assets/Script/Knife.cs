@@ -37,10 +37,9 @@ public class Knife : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
-
-    void Update()
+    public void Stop()
     {
-        
+        rigidbody.velocity = Vector3.zero;
     }
 
 

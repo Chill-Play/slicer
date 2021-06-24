@@ -77,6 +77,15 @@ public class Player : Entity<Player>
         rigidbody.velocity = velocity;
     }
 
+    public void Stop()
+    {
+        rigidbody.velocity = Vector3.zero;
+        for (int i = 0; i < knifes.Count; i++)
+        {
+            knifes[i].Stop();
+        }
+    }
+
     private void FixedUpdate()
     {
         rigidbody.AddForce(Vector3.down * additionalGravity, ForceMode.Acceleration);

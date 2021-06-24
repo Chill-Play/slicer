@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8165772451711634184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bfdd305b6dc1f4384f9aa63675ad85, type: 3}
+  m_Name: TutorialState
+  m_EditorClassIdentifier: 
 --- !u!114 &-6088104503955605930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11,6 +23,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30bfdd305b6dc1f4384f9aa63675ad85, type: 3}
   m_Name: Lose
+  m_EditorClassIdentifier: 
+--- !u!114 &-994346803923346867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bfdd305b6dc1f4384f9aa63675ad85, type: 3}
+  m_Name: TutorialMovementState
   m_EditorClassIdentifier: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -30,6 +54,8 @@ MonoBehaviour:
   - {fileID: 2514017134219998208}
   - {fileID: -6088104503955605930}
   - {fileID: 3816325023644774823}
+  - {fileID: -8165772451711634184}
+  - {fileID: -994346803923346867}
 --- !u!114 &2514017134219998208
 MonoBehaviour:
   m_ObjectHideFlags: 0
