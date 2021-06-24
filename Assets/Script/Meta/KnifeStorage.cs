@@ -40,8 +40,9 @@ public class KnifeStorage : MonoBehaviour
     }
 
 
-    public void AddSkinProgress(out float oldProgress, out float newProgress)
+    public void AddSkinProgress(out float oldProgress, out float newProgress, out bool newSkin)
     {
+        newSkin = false;
         progressToNext = PlayerPrefs.GetFloat(PROGRESS_PREFS, 0f);
         oldProgress = progressToNext;
         progressToNext += progressPerLevel;
@@ -49,7 +50,9 @@ public class KnifeStorage : MonoBehaviour
         {
             OpenNextSkin();
             progressToNext = 0f;
+            newSkin = true;
         }
+
         PlayerPrefs.SetFloat(PROGRESS_PREFS, progressToNext);
         newProgress = progressToNext;
     }
