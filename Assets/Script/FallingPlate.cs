@@ -5,15 +5,23 @@ using UnityEngine;
 public class FallingPlate : MonoBehaviour
 {
     private Rigidbody _rb;
-        // Start is called before the first frame update
-    void Start()
+    bool isFalling = false;
+
+       
+    void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+        _rb.useGravity = false;
     }
 
     private void OnCollisionEnter(Collision other) 
-    {
-        _rb.isKinematic = false;
-        Destroy(gameObject, 4f);
+    {   
+        if (!isFalling && (other.gameObject.GetComponent<Player>() != null || other.gameObject.GetComponent<Knife>() != null))
+        {
+            isFalling = true;
+            _rb.useGravity = true;
+            _rb.isKinematic = false;
+            Destroy(gameObject, 4f);
+        }
     }
 }
