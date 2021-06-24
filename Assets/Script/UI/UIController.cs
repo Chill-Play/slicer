@@ -33,6 +33,7 @@ public class UIController : MonoBehaviour
     private void GameController_OnGameStart()
     {
         startScreen.gameObject.SetActive(false);
+        gameScreen.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

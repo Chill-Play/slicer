@@ -10,6 +10,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] LevelSequence sequence;
     int currentLevel = -1;
 
+    public int CurrentLevel => currentLevel;
 
     void Awake()
     {

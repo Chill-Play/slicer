@@ -11,6 +11,8 @@ public class KnifeSkin : ScriptableObject
     [SerializeField] Vector3 handleOffset;
     [SerializeField] Vector3 bladeOffset;
     [SerializeField] Vector3 bladeForwardAxis;
+    [SerializeField] Sprite icon;
+    [SerializeField] Sprite iconBack;
 
     public string Id => id;
     public GameObject Handle => handle;
@@ -18,4 +20,6 @@ public class KnifeSkin : ScriptableObject
     public Vector3 HandleOffset => handleOffset;
     public Vector3 BladeOffset => bladeOffset;
     public Vector3 BladeForwardAxis => bladeForwardAxis;
+    public Sprite Icon => icon;
+    public Sprite IconBack => iconBack;
 }
