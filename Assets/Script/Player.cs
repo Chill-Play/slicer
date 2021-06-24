@@ -15,7 +15,10 @@ public class Player : Entity<Player>
     [SerializeField] Knife knifePrefab;
     [SerializeField] List<Knife> knifes;
     [SerializeField] LayerMask groundMask;
-    [SerializeField] float onKillPushBackPower = 5f; 
+    [SerializeField] float onKillPushBackPower = 5f;
+    [SerializeField] float additionalGravity = 10f;
+
+
     Vector3 roadDirection = Vector3.forward;
 
     float currentSpeed;
@@ -72,6 +75,11 @@ public class Player : Entity<Player>
         Vector3 velocity = forwardVector + -leftVector;//rigidbody.velocity;
         velocity.y = rigidbody.velocity.y;
         rigidbody.velocity = velocity;
+    }
+
+    private void FixedUpdate()
+    {
+        rigidbody.AddForce(Vector3.down * additionalGravity, ForceMode.Acceleration);
     }
 
 
