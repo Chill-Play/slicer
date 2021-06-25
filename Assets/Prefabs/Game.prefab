@@ -392,7 +392,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f3733f952adefd14cbe1b9d35af73dbc, type: 2}
   - {fileID: 11400000, guid: 4f43c0a78fee05b4db763fcfc47c9be8, type: 2}
   - {fileID: 11400000, guid: 3470fbff17450f544935169e42894528, type: 2}
-  defaultSkin: {fileID: 11400000, guid: f3733f952adefd14cbe1b9d35af73dbc, type: 2}
+  defaultSkin: {fileID: 11400000, guid: bceddc70f22e6c741acc20ad66860993, type: 2}
   progressPerLevel: 0.25
 --- !u!1 &1333130364
 GameObject:
