@@ -25,6 +25,7 @@ public class Knife : MonoBehaviour
     [SerializeField] GameObject skin;
     int sliceObjects;
     bool sliced;
+    FinishTarget finishTarget;
 
     Rigidbody rigidbody;
     public bool Slicing => sliceObjects > 0;
@@ -49,6 +50,30 @@ public class Knife : MonoBehaviour
         {
             sliceObjects++;
             OnStartSlice?.Invoke();
+        }
+    }
+
+    public void SetFinishTarget(FinishTarget finishTarget)
+    {
+        this.finishTarget = finishTarget;
+    }
+
+    private void FixedUpdate()
+    {
+        if (finishTarget != null)
+        {
+            if (transform.position.z >= finishTarget.transform.position.z)
+            {
+                if (finishTarget.Slice())
+                {
+                    Destroy(gameObject);
+                    Kill();
+                }
+                else
+                {
+                    finishTarget = null;
+                }
+            }
         }
     }
 

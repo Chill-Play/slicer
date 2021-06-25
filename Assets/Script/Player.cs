@@ -165,10 +165,9 @@ public class Player : Entity<Player>
     {
         if (Finished)
             return;
-        Finished = true;
-        //TestGameSetup.instance.RemoveGameplayModule<KnifeSpawningModule>();
+        Finished = true;      
         FinishTarget.OnLastFinishTargetHitted += FinishTarget_OnLastFinishTargetHitted;       
-        FindObjectOfType<Finish>().CalculateLastTarget(knifes.Count);
+        FindObjectOfType<Finish>().CalculateLastTarget(knifes);
         body.isKinematic = true;
         body.constraints = RigidbodyConstraints.None;
         FindObjectOfType<CameraController>().SetRotate(false);
@@ -178,16 +177,7 @@ public class Player : Entity<Player>
             animator.transform.parent = null;
             knifes[i].transform.parent = transform;
             knifes[i].Disable();
-            if (i > 0)
-            {
-                knifes[i].CanSlice = true;
-                knifes[i].DestroyOnSlice = true;
-            }
-            else
-            {
-                knifes[i].CanSlice = false;
-                knifes[i].OnStartSlice += Knife_OnStartSlice;
-            }
+            knifes[i].CanSlice = false;
         }
         if (knifes.Count > 0)
         {
@@ -229,18 +219,8 @@ public class Player : Entity<Player>
     private void FinishTarget_OnLastFinishTargetHitted()
     {
         FinishTarget.OnLastFinishTargetHitted -= FinishTarget_OnLastFinishTargetHitted;
-        knifeHittedLastTarget = true;
-        for (int i = 0; i < knifes.Count; i++)
-        {
-            knifes[i].CanSlice = false;
-        }       
+        knifeHittedLastTarget = true;       
     }
-
-    private void Knife_OnStartSlice()
-    {       
-        knifeHittedLastTarget = true;  
-    }
-
 
 
     bool knifeHittedLastTarget;

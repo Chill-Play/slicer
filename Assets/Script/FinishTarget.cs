@@ -15,7 +15,7 @@ public class FinishTarget : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<SlicedObjectPartCreator>().OnSlice += FinishTarget_OnSlice;     
+        //GetComponent<SlicedObjectPartCreator>().OnSlice += FinishTarget_OnSlice;     
     }
 
     private void FinishTarget_OnSlice()
@@ -33,13 +33,14 @@ public class FinishTarget : MonoBehaviour
         }
         else
         {
+            GetComponent<SlicedObjectPartCreator>().ForceToSlice();
             text.gameObject.SetActive(false);
         }
     }
 
     public void SetMultiplier(int multiplier, int textMult)
     {
-        Debug.Log(multiplier + " : " + textMult);
+        Debug.Log("multiplier " + multiplier + " : " + "textMult " + textMult);
         text.text = "x" + textMult;
         this.multiplier = multiplier;
     }
@@ -48,5 +49,11 @@ public class FinishTarget : MonoBehaviour
     {
         lastFinishTarget = true;
         GetComponent<SlicedObjectPartCreator>().Unsliceable = true;
+    }
+
+    public bool Slice()
+    {
+        FinishTarget_OnSlice();
+        return !lastFinishTarget;
     }
 }
