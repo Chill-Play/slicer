@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameController : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class GameController : MonoBehaviour
     [SerializeField] SubjectId tutorialStateId;
     [SerializeField] SubjectId tutorialMovementStateId;
 
+    [SerializeField] float slowMotionEndTimeScale = 0.08f;
+    [SerializeField] float slowMotionTimeScalingTime = 0.3f;    
+    [SerializeField] float slowMotionEndingTime = 0.7f;
+
     float levelProgress;
     bool gameStarted;
 
@@ -38,6 +43,7 @@ public class GameController : MonoBehaviour
 
     private void TutorialInput_OnTutorialPointComplete(bool isLast)
     {
+        DOTween.To(() => Time.timeScale, (x) => Time.timeScale = x, 1f, slowMotionEndingTime).SetUpdate(UpdateType.Normal, true);
         tutorialMode = !isLast;
         if (tutorialMode)
         {
@@ -51,15 +57,17 @@ public class GameController : MonoBehaviour
     }
 
     private void TutorialPoint_OnTutorialPointTrigger(TutorialPoint.TutorialPointInfo tutorialPointInfo)
-    {
-        //FindObjectOfType<Player>().Stop();
+    {       
         FindObjectOfType<GameFlowController>().MoveToState(tutorialStateId);
-        player.Stop();
+        DOTween.To(() => Time.timeScale, (x) => Time.timeScale = x, slowMotionEndTimeScale, slowMotionTimeScalingTime).SetUpdate(UpdateType.Normal, true);
+        
+        //player.Stop();
         OnTutorialStart.Invoke(tutorialPointInfo);
     }
 
     private void Player_OnDie()
     {
+        DOTween.To(() => Time.timeScale, (x) => Time.timeScale = x, 1f, slowMotionEndingTime).SetUpdate(UpdateType.Normal, true);
         FindObjectOfType<GameFlowController>().MoveToState(loseStateId);
         OnLose?.Invoke();
     }
