@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
 
     private void TutorialInput_OnTutorialPointComplete(bool isLast)
     {       
-        player.FastUp();
+        //player.FastUp();
         tutorialMode = !isLast;
         if (tutorialMode)
         {
@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
     private void TutorialPoint_OnTutorialPointTrigger(TutorialPoint.TutorialPointInfo tutorialPointInfo)
     {       
         FindObjectOfType<GameFlowController>().MoveToState(tutorialStateId);            
-        player.SlowDown();
+        player.Stop();
         OnTutorialStart.Invoke(tutorialPointInfo);
     }
 

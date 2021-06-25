@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
     public const string LEVEL_NUMBER_PREFS = "G_LevelNumber";
 
     [SerializeField] LevelSequence sequence;
+    [SerializeField] int tutorialLevelsCount;
     int currentLevel = -1;
 
     public int CurrentLevel => currentLevel;
@@ -23,6 +24,14 @@ public class LevelController : MonoBehaviour
         Debug.Log("NextLevel");
         int level = currentLevel + 1;
         PlayerPrefs.SetInt(LEVEL_NUMBER_PREFS, level);
+        int sceneIndex = sequence.GetIndex(level);
+        if (sceneIndex < tutorialLevelsCount)
+        {
+            if (level > tutorialLevelsCount)
+            {
+                level += tutorialLevelsCount;
+            }
+        }
         SceneReference scene = sequence.GetScene(level);
         SceneManager.LoadScene(scene);
     }

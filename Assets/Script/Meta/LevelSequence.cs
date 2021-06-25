@@ -11,4 +11,9 @@ public class LevelSequence : ScriptableObject
     {
         return scenes[i % scenes.Count];
     }
+
+    public int GetIndex(int i)
+    {
+        return i % scenes.Count;
+    }
 }
