@@ -258,7 +258,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 513, y: 574}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &873027800
 CanvasRenderer:
@@ -392,7 +392,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f3733f952adefd14cbe1b9d35af73dbc, type: 2}
   - {fileID: 11400000, guid: 4f43c0a78fee05b4db763fcfc47c9be8, type: 2}
   - {fileID: 11400000, guid: 3470fbff17450f544935169e42894528, type: 2}
-  defaultSkin: {fileID: 11400000, guid: f3733f952adefd14cbe1b9d35af73dbc, type: 2}
+  defaultSkin: {fileID: 11400000, guid: bceddc70f22e6c741acc20ad66860993, type: 2}
   progressPerLevel: 0.25
 --- !u!1 &1333130364
 GameObject:
@@ -577,8 +577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: 88}
-  m_SizeDelta: {x: 513, y: 574}
+  m_AnchoredPosition: {x: -0.000015259, y: 103}
+  m_SizeDelta: {x: 763.27576, y: 854.03564}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1369395154
 CanvasRenderer:

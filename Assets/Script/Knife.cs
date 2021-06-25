@@ -103,8 +103,7 @@ public class Knife : MonoBehaviour
         if (groundMask == (groundMask | (1 << collisionGO.gameObject.layer)))
         {
             float upDot = Vector3.Dot(collision.contacts[0].normal, Vector3.up);
-            float downDot = Vector3.Dot(collision.contacts[0].normal, Vector3.down);
-            if (upDot < 0.6f || downDot > 0.5f)
+            if (upDot < 0.75f)
             {
                 Kill();
             }

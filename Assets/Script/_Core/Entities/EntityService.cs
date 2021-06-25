@@ -40,7 +40,11 @@ namespace GameFramework.Core
         public T GetFirstEntity<T>() where T : Entity
         {
             T[] entities = GetEntities<T>();
-            return entities[0];
+            if (entities.Length > 0)
+            {
+                return entities[0];
+            }
+            return null;
         }
 
 
