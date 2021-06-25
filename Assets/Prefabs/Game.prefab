@@ -1,5 +1,127 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &56617766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 56617767}
+  - component: {fileID: 56617769}
+  m_Layer: 5
+  m_Name: UIPickUpText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &56617767
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56617766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8567625539155260082}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &56617769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56617766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48510d6f0cee9d8438673a348d6ebb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textVariants:
+  - AWESOME!
+  - COOL!
+  - GOOD!
+  textPrefab: {fileID: 8093197830044320173, guid: 85e248896fa63b841b7f12d0681cb020,
+    type: 3}
+  scaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.2
+      inSlope: 3.328501
+      outSlope: 3.328501
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.24034844
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -4.478618
+      outSlope: -4.478618
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12664008
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  moveUpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.1815603
+      outSlope: 2.1815603
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.03590285
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  moveUpDistance: 10
+  time: 1
 --- !u!1 &677899292
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,10 +255,10 @@ RectTransform:
   m_Father: {fileID: 1369395152}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00005313138, y: -0.000061035156}
-  m_SizeDelta: {x: 513, y: 574}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &873027800
 CanvasRenderer:
@@ -455,8 +577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000045776, y: 88}
-  m_SizeDelta: {x: 513, y: 574}
+  m_AnchoredPosition: {x: 0.0000076294, y: 90}
+  m_SizeDelta: {x: 788.0427, y: 881.7477}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1369395154
 CanvasRenderer:
@@ -1254,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d21ae439b5d41b4a83fce681e8efc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textPrefab: {fileID: 8093197830044320173, guid: 85e248896fa63b841b7f12d0681cb020,
+  textPrefab: {fileID: 8093197830044320173, guid: c7e1e83f3213a204eb36b5b62d69a639,
     type: 3}
   scaleCurve:
     serializedVersion: 2
@@ -3342,6 +3464,7 @@ RectTransform:
   - {fileID: 8567625537731279455}
   - {fileID: 8567625538701612330}
   - {fileID: 8567625538866332166}
+  - {fileID: 56617767}
   m_Father: {fileID: 8567625538856379933}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

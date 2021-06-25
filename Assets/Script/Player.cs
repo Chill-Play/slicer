@@ -147,25 +147,18 @@ public class Player : Entity<Player>
             return;
         Finished = true;
         FinishTarget.OnLastFinishTargetHitted += FinishTarget_OnLastFinishTargetHitted;
-        FindObjectOfType<Finish>().CalculateLastTarget(knifes.Count);
+        FindObjectOfType<Finish>().CalculateLastTarget(knifes);
         rigidbody.isKinematic = true;
         rigidbody.constraints = RigidbodyConstraints.None;
         FindObjectOfType<CameraController>().SetRotate(false);
         transform.forward = roadDirection;
+        animator.SetLayerWeight(1, 0f);
         for (int i = 0; i < knifes.Count; i++)
         {
             animator.transform.parent = null;
             knifes[i].transform.parent = transform;
             knifes[i].Disable();
-            if (i > 0)
-            {
-                knifes[i].DestroyOnSlice = true;
-            }
-            else
-            {
-                knifes[i].CanSlice = false;
-                knifes[i].OnStartSlice += Knife_OnStartSlice;
-            }
+            knifes[i].CanSlice = false;
         }
         if (knifes.Count > 0)
         {
@@ -182,10 +175,6 @@ public class Player : Entity<Player>
         FinishTarget.OnLastFinishTargetHitted -= FinishTarget_OnLastFinishTargetHitted;
         StartCoroutine(WinCoroutine()); //Refactor1
         knifeHittedLastTarget = true;
-        for (int i = 0; i < knifes.Count; i++)
-        {
-            knifes[i].CanSlice = false;
-        }
     }
 
     private void Knife_OnStartSlice()
@@ -271,7 +260,7 @@ public class Player : Entity<Player>
             transform.localPosition = Vector3.Lerp(startLocalPosition, new Vector3(0f, -0.01151f, 0f), t);
         }
         animator.SetTrigger("Throw");
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.3f);
         transform.parent = null;
         t = 0f;
         startPos = transform.position;

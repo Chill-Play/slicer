@@ -21,6 +21,7 @@ public class KnifePickable : MonoBehaviour, IPickable
         }
         picked = true;
         FindObjectOfType<Player>().SpawnKnife();
+        FindObjectOfType<UIPickupText>().SpawnText(transform.position);
         Destroy(gameObject);
     }
 

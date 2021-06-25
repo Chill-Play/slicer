@@ -13,12 +13,8 @@ public class FinishTarget : MonoBehaviour
     bool lastFinishTarget = false;
 
 
-    private void Start()
-    {
-        GetComponent<SlicedObject>().OnSlice += FinishTarget_OnSlice;
-    }
 
-    private void FinishTarget_OnSlice()
+    private void OnSlice()
     {   
         OnUpdateMultiplier?.Invoke(multiplier);
         ParticleSystem[] particleSystems = GetComponentsInChildren<ParticleSystem>();
@@ -32,9 +28,18 @@ public class FinishTarget : MonoBehaviour
         }
         else
         {
+            GetComponent<SlicedObject>().ForceToSlice();
             text.gameObject.SetActive(false);
         }
     }
+
+
+    public bool Slice()
+    {
+        OnSlice();
+        return !lastFinishTarget;
+    }
+
 
     public void SetMultiplier(int multiplier, int textMult)
     {

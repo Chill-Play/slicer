@@ -28,6 +28,12 @@ public class SlicedObject : MonoBehaviour, ISlicable
     public bool Unsliceable { get; set; } = false;
 
 
+    public void ForceToSlice()
+    {
+        TryToSlice(maxPenetration, transform.position, transform.right);
+    }
+
+
     public bool TryToSlice(float penetration, Vector3 pos, Vector3 knifeRight)
     {
         if (Unsliceable)

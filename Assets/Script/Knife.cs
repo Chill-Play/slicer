@@ -25,6 +25,8 @@ public class Knife : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     int sliceObjects;
 
+    FinishTarget finishTarget;
+
     Rigidbody rigidbody;
     public bool Slicing => sliceObjects > 0;
     public Player Player { get; set; }
@@ -102,7 +104,7 @@ public class Knife : MonoBehaviour
         {
             float upDot = Vector3.Dot(collision.contacts[0].normal, Vector3.up);
             float downDot = Vector3.Dot(collision.contacts[0].normal, Vector3.down);
-            if (upDot < 0.3f || downDot > 0.5f)
+            if (upDot < 0.6f || downDot > 0.5f)
             {
                 Kill();
             }
@@ -198,6 +200,32 @@ public class Knife : MonoBehaviour
         //rigidbody.constraints = RigidbodyConstraints.None;
         Destroy(GetComponent<Joint>());
         Destroy(rigidbody);
+    }
+
+
+    public void SetFinishTarget(FinishTarget finishTarget)
+    {
+        this.finishTarget = finishTarget;
+    }
+
+    private void FixedUpdate()
+    {
+        if (finishTarget != null)
+        {
+            Vector3 relativePosition = finishTarget.transform.InverseTransformPoint(transform.position);
+            if (relativePosition.z < 0f)
+            {
+                if (finishTarget.Slice())
+                {
+                    Destroy(gameObject);
+                    Kill();
+                }
+                else
+                {
+                    finishTarget = null;
+                }
+            }
+        }
     }
 
 
