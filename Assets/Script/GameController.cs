@@ -51,7 +51,8 @@ public class GameController : MonoBehaviour
     }
 
     private void TutorialPoint_OnTutorialPointTrigger(TutorialPoint.TutorialPointInfo tutorialPointInfo)
-    {      
+    {
+        //FindObjectOfType<Player>().Stop();
         FindObjectOfType<GameFlowController>().MoveToState(tutorialStateId);
         player.Stop();
         OnTutorialStart.Invoke(tutorialPointInfo);
@@ -88,20 +89,17 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if (!gameStarted)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartGame();
-            }
-        }*/
-
-
         levelProgress = player.transform.position.z / finish.transform.position.z;
         if(levelProgress >= 1f && !player.Finished)
         {
             FindObjectOfType<GameFlowController>().MoveToState(gameFinishStateId);
             player.Finish();
         }
+    }
+
+    private void OnDisable()
+    {
+        TutorialPoint.OnTutorialPointTrigger -= TutorialPoint_OnTutorialPointTrigger;
+        TutorialInput.OnTutorialPointComplete -= TutorialInput_OnTutorialPointComplete;
     }
 }

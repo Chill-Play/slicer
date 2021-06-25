@@ -23,7 +23,7 @@ public class Player : Entity<Player>
 
     float currentSpeed;
     float targetSpeed;
-    Rigidbody rigidbody;
+    Rigidbody body;
     KnifeSkin skin;
 
     public bool Finished { get; set; }
@@ -31,8 +31,8 @@ public class Player : Entity<Player>
 
     // Start is called before the first frame update
     void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
+    {       
+        body = GetComponent<Rigidbody>();
         skin = FindObjectOfType<KnifeStorage>().CurrentSkin;
         Instantiate(skin.Handle, transform.position + skin.HandleOffset, transform.rotation * Quaternion.Euler(skin.Handle.transform.eulerAngles), transform);
         targetSpeed = speed;
@@ -73,13 +73,14 @@ public class Player : Entity<Player>
         Vector3 leftVector = Vector3.Cross(roadDirection, Vector3.up) * input * rightSpeed;
         //rigidbody.rotation = Quaternion.LookRotation(globalDirection);
         Vector3 velocity = forwardVector + -leftVector;//rigidbody.velocity;
-        velocity.y = rigidbody.velocity.y;
-        rigidbody.velocity = velocity;
+        velocity.y = body.velocity.y;
+        body.velocity = velocity;
     }
 
     public void Stop()
     {
-        rigidbody.velocity = Vector3.zero;
+        currentSpeed = 0f;
+        body.velocity = Vector3.zero;
         for (int i = 0; i < knifes.Count; i++)
         {
             knifes[i].Stop();
@@ -88,7 +89,7 @@ public class Player : Entity<Player>
 
     private void FixedUpdate()
     {
-        rigidbody.AddForce(Vector3.down * additionalGravity, ForceMode.Acceleration);
+        body.AddForce(Vector3.down * additionalGravity, ForceMode.Acceleration);
     }
 
 
@@ -100,7 +101,7 @@ public class Player : Entity<Player>
             Vector3 offset = Vector3.up * newBounds.size.y / 2f;
             instance.transform.position = transform.position;
             transform.position += offset * 2.2f;
-            instance.GetComponent<Joint>().connectedBody = rigidbody;
+            instance.GetComponent<Joint>().connectedBody = body;
             instance.Player = this;
             instance.CanSlice = true;
             //instance.transform.parent = transform;
@@ -128,7 +129,7 @@ public class Player : Entity<Player>
         {
             knifes[i].Kill();
         }
-        rigidbody.velocity = Vector3.zero;
+        body.velocity = Vector3.zero;
         ragdoll.Push(Vector3.back * onKillPushBackPower, ragdoll.transform.position);
 
         OnDie?.Invoke();
@@ -168,8 +169,8 @@ public class Player : Entity<Player>
         //TestGameSetup.instance.RemoveGameplayModule<KnifeSpawningModule>();
         FinishTarget.OnLastFinishTargetHitted += FinishTarget_OnLastFinishTargetHitted;       
         FindObjectOfType<Finish>().CalculateLastTarget(knifes.Count);
-        rigidbody.isKinematic = true;
-        rigidbody.constraints = RigidbodyConstraints.None;
+        body.isKinematic = true;
+        body.constraints = RigidbodyConstraints.None;
         FindObjectOfType<CameraController>().SetRotate(false);
         transform.forward = roadDirection;
         for (int i = 0; i < knifes.Count; i++)
