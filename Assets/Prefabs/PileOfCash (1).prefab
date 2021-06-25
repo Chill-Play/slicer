@@ -115,7 +115,7 @@ MonoBehaviour:
   partPrefab: {fileID: 252317108469241861, guid: 72f5b0b06099cfb4bbdef0c063c11803,
     type: 3}
   inverseLeftPartVelocity: 0
-  windDragSettings: {fileID: 0}
+  windDragSettings: {fileID: 11400000, guid: 394d367aea956a840940318983029d47, type: 2}
 --- !u!114 &-6169609803161995992
 MonoBehaviour:
   m_ObjectHideFlags: 0
