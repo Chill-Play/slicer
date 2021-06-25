@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 60;
         player = FindObjectOfType<Player>();
         FindObjectOfType<CameraController>().Target = player.transform;
         //player.enabled = false;

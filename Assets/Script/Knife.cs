@@ -105,6 +105,7 @@ public class Knife : MonoBehaviour
             float upDot = Vector3.Dot(collision.contacts[0].normal, Vector3.up);
             if (upDot < 0.75f)
             {
+                Debug.Log("Collision : " + collision.gameObject.name);
                 Kill();
             }
         }

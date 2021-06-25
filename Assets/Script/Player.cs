@@ -338,9 +338,14 @@ public class Player : Entity<Player>
         Destroy(knife.gameObject, 5.0f);
     }
 
-
+    bool killed;
     public void Kill()
     {
+
+        if (killed)
+            return;
+
+        killed = true;
         RagdollController ragdoll = GetComponentInChildren<RagdollController>();
         ragdoll.SetRagdollActive(true);
         ragdoll.transform.parent = null;
