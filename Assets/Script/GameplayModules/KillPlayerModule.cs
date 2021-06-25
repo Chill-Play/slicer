@@ -27,6 +27,9 @@ public class KillPlayerModule : GameplayModule
     public void OnDisable()
     {
         Player player = IoCContainer.Get<EntityService>().GetFirstEntity<Player>();
-        player.OnCollision -= Player_OnCollision;
+        if (player != null)
+        {
+            player.OnCollision -= Player_OnCollision;
+        }
     }
 }

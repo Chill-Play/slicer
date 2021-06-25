@@ -9,7 +9,7 @@ public class LevelLabel : MonoBehaviour
 
     void Start()
     {
-        label.text = "LEVEL " + FindObjectOfType<LevelController>().CurrentLevel;
+        label.text = "LEVEL " + (FindObjectOfType<LevelController>().CurrentLevel + 1);
     }
 
 }
