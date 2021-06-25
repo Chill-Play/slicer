@@ -8,7 +8,7 @@
 
         [Toggle(USE_MAIN_TEXTURE)]
         _UseMainTexture("Use Main Texture", Float) = 0
-        [NoScaleOffset] _MainTex("Texture", 2D) = "white" {}
+        _MainTex("Texture", 2D) = "white" {}
 
         [Toggle(USE_SPECULAR)]
         _UseSpecular("Use Specular", Float) = 0 

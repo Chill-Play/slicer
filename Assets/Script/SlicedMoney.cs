@@ -40,8 +40,8 @@ public class SlicedMoney : MonoBehaviour, ISlicable
         {
             if(penetration > nextPenetration)
             {
-                Rigidbody rightPart = Instantiate(partPrefab, transform.position, Quaternion.LookRotation(transform.up));
-                Rigidbody leftPart = Instantiate(partPrefab, transform.position, Quaternion.LookRotation(transform.up));
+                Rigidbody rightPart = Instantiate(partPrefab, transform.position, Quaternion.LookRotation(transform.forward));
+                Rigidbody leftPart = Instantiate(partPrefab, transform.position, Quaternion.LookRotation(transform.forward));
                 rightPart.transform.localScale = new Vector3(-rightPart.transform.localScale.x, rightPart.transform.localScale.y, rightPart.transform.localScale.z);
                 PushPart(rightPart, rightPart.transform.right);
                 PushPart(leftPart, -leftPart.transform.right);

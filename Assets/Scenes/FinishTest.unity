@@ -934,6 +934,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1270933851, guid: 57b0c2f70b6521c41987c324753e4070, type: 3}
+      propertyPath: defaultSkin
+      value: 
+      objectReference: {fileID: 11400000, guid: 87a1d6d33967cb642922c582d7928fe5,
+        type: 2}
     - target: {fileID: 8567625537907464518, guid: 57b0c2f70b6521c41987c324753e4070,
         type: 3}
       propertyPath: m_Name

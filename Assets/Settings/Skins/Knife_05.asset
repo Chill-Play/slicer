@@ -15,7 +15,7 @@ MonoBehaviour:
   id: Knife_05
   handle: {fileID: 4923372589979255403, guid: dc27518c2ae66234a9fa3aecc8e21c3a, type: 3}
   blade: {fileID: 5506943074492922346, guid: 6f779d2259874584c98d86b2fb389c91, type: 3}
-  handleOffset: {x: 0, y: -1.8, z: 0}
+  handleOffset: {x: 0, y: -1.42, z: 0}
   bladeOffset: {x: 0, y: 1, z: 0}
   bladeForwardAxis: {x: 0, y: -1, z: 0}
   icon: {fileID: 21300000, guid: fe2afab794c9c1e4da7e6413a7bbc302, type: 3}
