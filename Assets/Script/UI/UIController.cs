@@ -38,12 +38,13 @@ public class UIController : MonoBehaviour
 
     private void GameController_OnLose()
     {
+        tutorialScreen.SetActive(false);
         gameScreen.gameObject.SetActive(false);
         loseScreen.gameObject.SetActive(true);
     }
 
     private void GameController_OnWin()
-    {
+    {      
         gameScreen.gameObject.SetActive(false);
         winScreen.gameObject.SetActive(true);
     }

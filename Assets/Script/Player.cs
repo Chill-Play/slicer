@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Player : Entity<Player>
 {
@@ -17,6 +18,10 @@ public class Player : Entity<Player>
     [SerializeField] LayerMask groundMask;
     [SerializeField] float onKillPushBackPower = 5f;
     [SerializeField] float additionalGravity = 10f;
+    [SerializeField] float maxSlowDownSpeed = 0.5f;
+    [SerializeField] float slowDownSpeedScaleingTime = 0.7f;
+    [SerializeField] float speedRecoveryTime = 1f;
+
 
 
     Vector3 roadDirection = Vector3.forward;
@@ -25,6 +30,8 @@ public class Player : Entity<Player>
     float targetSpeed;
     Rigidbody body;
     KnifeSkin skin;
+    bool updateSpeed = true;   
+    float slowDownBeginSpeed;
 
     public bool Finished { get; set; }
     public Animator Animator => animator;
@@ -40,25 +47,28 @@ public class Player : Entity<Player>
 
 
     public void UpdateSpeed()
-    {     
-        bool slicing = false;
-        for (int i = 0; i < knifes.Count; i++)
+    {
+        if (updateSpeed)
         {
-            if (knifes[i].Slicing)
+            bool slicing = false;
+            for (int i = 0; i < knifes.Count; i++)
             {
-                slicing = true;
-                break;
+                if (knifes[i].Slicing)
+                {
+                    slicing = true;
+                    break;
+                }
             }
+            if (slicing)
+            {
+                targetSpeed = speed * sliceSpeedMultiplier;
+            }
+            else
+            {
+                targetSpeed = speed;
+            }
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, Time.deltaTime * 10f);
         }
-        if (slicing)
-        {
-            targetSpeed = speed * sliceSpeedMultiplier;
-        }
-        else
-        {
-            targetSpeed = speed;
-        }
-        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, Time.deltaTime * 10f);
     }
 
 
@@ -85,6 +95,18 @@ public class Player : Entity<Player>
         {
             knifes[i].Stop();
         }
+    }
+
+    public void SlowDown()
+    {
+
+        updateSpeed = false;
+        slowDownBeginSpeed = currentSpeed;
+        DOTween.To(() => currentSpeed, (x) => currentSpeed = x, maxSlowDownSpeed, slowDownSpeedScaleingTime); 
+    }
+    public void FastUp()
+    {
+        DOTween.To(() => currentSpeed, (x) => currentSpeed = x, slowDownBeginSpeed, speedRecoveryTime).OnComplete(() => updateSpeed = true);       
     }
 
     private void FixedUpdate()
