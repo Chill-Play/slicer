@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bde08960db89d344ac41953dd12435b, type: 3}
   m_Name: Knife_06
   m_EditorClassIdentifier: 
-  id: 
+  id: Knife_06
   handle: {fileID: 5965999880988856660, guid: 5580de7fb1837704f88b2cb7af90d765, type: 3}
   blade: {fileID: 2053523018757689294, guid: 5acf7045d1e849d4e9d20c452e5bdbc1, type: 3}
   handleOffset: {x: 0, y: -1.4, z: 0}
