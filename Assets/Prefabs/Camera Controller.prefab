@@ -130,6 +130,7 @@ MonoBehaviour:
   rotate: 1
   camera: {fileID: 3175003734134946953}
   target: {fileID: 0}
+  minY: -5
 --- !u!1 &3175003735249520329
 GameObject:
   m_ObjectHideFlags: 0

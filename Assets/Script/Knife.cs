@@ -27,7 +27,7 @@ public class Knife : MonoBehaviour
     bool sliced;
     FinishTarget finishTarget;
 
-    Rigidbody rigidbody;
+    Rigidbody body;
     public bool Slicing => sliceObjects > 0;
     public Player Player { get; set; }
     public bool DestroyOnSlice { get; set; }
@@ -38,12 +38,12 @@ public class Knife : MonoBehaviour
     void Start()
     {
         KnifeLength = 2f * sliceCollider.bounds.extents.y;
-        rigidbody = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody>();
     }
 
     public void Stop()
     {
-        rigidbody.velocity = Vector3.zero;
+        body.velocity = Vector3.zero;
     }
 
 
@@ -128,7 +128,7 @@ public class Knife : MonoBehaviour
     {
         Destroy(GetComponent<Joint>());
         Player.RemoveKnife(this);
-        rigidbody.constraints = RigidbodyConstraints.None;
+        body.constraints = RigidbodyConstraints.None;
         GetComponent<Collider>().material = null;
         Destroy(this);
     }
@@ -136,7 +136,7 @@ public class Knife : MonoBehaviour
     public void Disable()
     {        
         Destroy(GetComponent<Joint>());
-        Destroy(rigidbody);
+        Destroy(body);
     }
 
     public float ComputePenetration(Bounds bounds, Vector3 direction, Vector3 point)
