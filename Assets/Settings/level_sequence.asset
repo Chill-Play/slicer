@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: level_sequence
   m_EditorClassIdentifier: 
   scenes:
+  - sceneAsset: {fileID: 102900000, guid: f68fccef750007f4dbaed609ebdbe740, type: 3}
+    scenePath: Assets/Scenes/Level_0_Tutor.unity
   - sceneAsset: {fileID: 102900000, guid: f6e7c80a47237bb4dbb9922fbc007384, type: 3}
     scenePath: Assets/Scenes/Level_1_new.unity
   - sceneAsset: {fileID: 102900000, guid: cfc286cc3ff6fcf4bac632d09711a401, type: 3}
