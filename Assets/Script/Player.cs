@@ -153,7 +153,7 @@ public class Player : Entity<Player>
         }
         body.velocity = Vector3.zero;
         ragdoll.Push(Vector3.back * onKillPushBackPower, ragdoll.transform.position);
-
+        body.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
         OnDie?.Invoke();
         //Destroy(this);
     }
@@ -185,8 +185,12 @@ public class Player : Entity<Player>
 
     public void Finish()
     {
+        
         if (Finished)
             return;
+
+    
+
         Finished = true;      
         FinishTarget.OnLastFinishTargetHitted += FinishTarget_OnLastFinishTargetHitted;       
         FindObjectOfType<Finish>().CalculateLastTarget(knifes);
@@ -199,6 +203,7 @@ public class Player : Entity<Player>
             animator.transform.parent = null;
             knifes[i].transform.parent = transform;
             knifes[i].Disable();
+            knifes[i].transform.localPosition = knifes[i].transform.localPosition.SetY(-(i + 1) * knifes[i].KnifeLength);
             knifes[i].CanSlice = false;
         }
         if (knifes.Count > 0)

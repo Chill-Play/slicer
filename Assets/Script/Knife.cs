@@ -32,9 +32,12 @@ public class Knife : MonoBehaviour
     public Player Player { get; set; }
     public bool DestroyOnSlice { get; set; }
     public bool CanSlice { get; set; } = true;
+    public float KnifeLength { get; set; }
+
 
     void Start()
     {
+        KnifeLength = 2f * sliceCollider.bounds.extents.y;
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -125,7 +128,7 @@ public class Knife : MonoBehaviour
     {
         Destroy(GetComponent<Joint>());
         Player.RemoveKnife(this);
-        //rigidbody.constraints = RigidbodyConstraints.None;
+        rigidbody.constraints = RigidbodyConstraints.None;
         GetComponent<Collider>().material = null;
         Destroy(this);
     }

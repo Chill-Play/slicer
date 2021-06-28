@@ -68,7 +68,7 @@ public class KnifeStorage : MonoBehaviour
     {
         if (skin == null)
         {
-            Debug.LogError("HI ROMAN, I AM STUPID ERROR <3");
+            return;
         }
 
         PlayerInfo.Instance.inventory.AddItem(skin.Id, SKIN_ITEM_CATEGORY);
