@@ -25,31 +25,34 @@ public class KnifeStorage : MonoBehaviour
     {
         PlayerInfo.Instance.inventory.LoadItems();
         IEnumerable<PlayerItem> knifes = PlayerInfo.Instance.inventory.GetItemsFromCategory(SKIN_ITEM_CATEGORY);
-        foreach(PlayerItem item in knifes)
+        foreach (PlayerItem item in knifes)
         {
             KnifeSkin skin = skinList.FirstOrDefault((x) => x.Id == item.id);
-            if(skin != null)
+            if (skin != null)
             {
                 availableSkins.Add(skin);
             }
         }
-        if(!availableSkins.Contains(defaultSkin))
+        if (!availableSkins.Contains(defaultSkin))
         {
             availableSkins.Insert(0, defaultSkin);
         }
     }
 
 
-    public void AddSkinProgress(out float oldProgress, out float newProgress)
+    public void AddSkinProgress(out float oldProgress, out float newProgress, out bool newSkin)
     {
+        newSkin = false;
         progressToNext = PlayerPrefs.GetFloat(PROGRESS_PREFS, 0f);
         oldProgress = progressToNext;
         progressToNext += progressPerLevel;
-        if(progressToNext >= 1f)
+        if (progressToNext >= 1f)
         {
             OpenNextSkin();
             progressToNext = 0f;
+            newSkin = true;
         }
+
         PlayerPrefs.SetFloat(PROGRESS_PREFS, progressToNext);
         newProgress = progressToNext;
     }
@@ -63,6 +66,11 @@ public class KnifeStorage : MonoBehaviour
 
     public void AddSkin(KnifeSkin skin)
     {
+        if (skin == null)
+        {
+            Debug.LogError("HI ROMAN, I AM STUPID ERROR <3");
+        }
+
         PlayerInfo.Instance.inventory.AddItem(skin.Id, SKIN_ITEM_CATEGORY);
         PlayerInfo.Instance.inventory.SaveItems();
     }
@@ -70,16 +78,13 @@ public class KnifeStorage : MonoBehaviour
 
     public KnifeSkin GetNextSkin()
     {
-        for(int i = 0; i < skinList.Count; i++)
+        for (int i = 0; i < skinList.Count; i++)
         {
-            if(!availableSkins.Contains(skinList[i]))
+            if (!availableSkins.Contains(skinList[i]))
             {
                 return skinList[i];
             }
         }
         return null;
     }
-
-   
-    
 }

@@ -31,7 +31,11 @@ public class WinScreen : MonoBehaviour
             skinIcon.enabled = false;
             skinFillProgress.enabled = false;
         }
-        FindObjectOfType<KnifeStorage>().AddSkinProgress(out float oldProgress, out float newProgress);
+        FindObjectOfType<KnifeStorage>().AddSkinProgress(out float oldProgress, out float newProgress, out bool newSkin);
+        if (newSkin)
+        {
+            newProgress = 1f;
+        }
         Sequence sequence = DOTween.Sequence();
         skinFillProgress.fillAmount = oldProgress;
         sequence.Append(levelCompleteLabel.DOScale(1f, 0.4f).SetEase(Ease.OutElastic, 1.3f, 0.3f));
