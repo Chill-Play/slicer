@@ -71,7 +71,10 @@ public class Player : Entity<Player>
         }
     }
 
-
+    Vector3 lastPosition;
+    Vector3 smoothedVelocity;
+    Vector3 smoothedVelocityVelocity;
+    Vector3 lastVelocity;
     // Update is called once per frame
     public void Move(float input)
     {
@@ -85,6 +88,16 @@ public class Player : Entity<Player>
         Vector3 velocity = forwardVector + -leftVector;//rigidbody.velocity;
         velocity.y = body.velocity.y;
         body.velocity = velocity;
+
+        Vector3 animationVelocity = (body.position - lastPosition) / Time.fixedDeltaTime;
+        smoothedVelocityVelocity = -(smoothedVelocity + (animationVelocity - lastVelocity) * 2f);
+        smoothedVelocityVelocity = Vector3.ClampMagnitude(smoothedVelocityVelocity, 4f);
+        Vector3 damping = -(0.7f) * smoothedVelocityVelocity;
+        smoothedVelocity += (smoothedVelocityVelocity + damping) * Time.fixedDeltaTime * 20f;
+        animator.SetFloat("VelocityY", smoothedVelocity.y);
+        animator.SetFloat("VelocityX", smoothedVelocity.x);
+        lastPosition = body.position;
+        lastVelocity = animationVelocity;
     }
 
     public void Stop()
