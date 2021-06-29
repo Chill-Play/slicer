@@ -22,7 +22,7 @@ public class LevelController : MonoBehaviour
     {
         int level = currentLevel + 1;
         PlayerPrefs.SetInt(LEVEL_NUMBER_PREFS, level);
-        SceneReference scene = sequence.GetScene(level);
+        SceneReference scene = sequence.GetScene(level - 1);
         SceneManager.LoadScene(scene);
     }
     

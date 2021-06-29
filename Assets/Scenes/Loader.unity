@@ -326,6 +326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSequence: {fileID: 11400000, guid: 39b9734266436774ca598c37053e9ffe, type: 2}
+  tutorial:
+    sceneAsset: {fileID: 102900000, guid: f68fccef750007f4dbaed609ebdbe740, type: 3}
+    scenePath: Assets/Scenes/Level_0_Tutor.unity
 --- !u!4 &1885708267
 Transform:
   m_ObjectHideFlags: 0
