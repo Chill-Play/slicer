@@ -301,23 +301,29 @@ public class Player : Entity<Player>
         transform.SetParent(rightHand, true);
         float t = 0f;
         transform.up = transform.position - startPos.SetY(0f);
-        Quaternion startLocalRotation = transform.localRotation;
+        Quaternion startRotation = transform.rotation;
         Vector3 startLocalPosition = transform.localPosition;
 
-        while (t < 1f)
+        while (t < 0.3f)
         {
             yield return new WaitForEndOfFrame();
             t += Time.deltaTime * 5f;
-            transform.localRotation = Quaternion.Lerp(startLocalRotation, Quaternion.LookRotation(Vector3.right) * Quaternion.LookRotation(Vector3.forward) * Quaternion.Euler(0f, -90f, 0f), t);
-            transform.localPosition = Vector3.Lerp(startLocalPosition, new Vector3(0f, -0.01151f, 0f), t);
         }
         animator.SetTrigger("Throw");
-        yield return new WaitForSeconds(0.45f);
+        t = 0f;
+        while (t < 0.6f)
+        {
+            yield return new WaitForEndOfFrame();
+            t += Time.deltaTime * 1.5f;
+            float normalizedT = (t / 0.6f);
+            Quaternion targetRotation = Quaternion.Euler((normalizedT * normalizedT * normalizedT) * 150f, 0f, 0f) * startRotation;
+            transform.rotation = targetRotation;
+        }
         transform.parent = null;
         t = 0f;
         startPos = transform.position;
         Vector3 targetPos = FindObjectOfType<TargetPoint>().transform.position;
-        startLocalRotation = transform.rotation;
+        startRotation = transform.rotation;
         CameraController cameraController = FindObjectOfType<CameraController>();
         cameraController.Target = transform;
         for (int j = 0; j < knifes.Count; j++)
@@ -329,7 +335,7 @@ public class Player : Entity<Player>
         {
             yield return new WaitForEndOfFrame();
             t += Time.deltaTime * 0.8f;
-            transform.rotation = Quaternion.Lerp(startLocalRotation, Quaternion.LookRotation(transform.position - targetPos) * Quaternion.LookRotation(Vector3.down), t * 5f);
+            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(transform.position - targetPos, Vector3.down) * Quaternion.LookRotation(Vector3.down), t * 5f);
             Vector3 nextPos = Vector3.Lerp(startPos, targetPos, t);
             nextPos += Vector3.up * Mathf.Sin(t * Mathf.PI);
             cameraController.ApplyShakeOffset(new Vector3(Mathf.PerlinNoise(t * 10f, t * 10f),

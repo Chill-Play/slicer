@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         //player.enabled = false;
+        Application.targetFrameRate = 60;
         player.OnDie += Player_OnDie;
         TutorialPoint.OnTutorialPointTrigger += TutorialPoint_OnTutorialPointTrigger;
         TutorialInput.OnTutorialPointComplete += TutorialInput_OnTutorialPointComplete;

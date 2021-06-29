@@ -128,7 +128,10 @@ public class Knife : MonoBehaviour
     {
         Destroy(GetComponent<Joint>());
         Player.RemoveKnife(this);
-        body.constraints = RigidbodyConstraints.None;
+        if (body != null)
+        {
+            body.constraints = RigidbodyConstraints.None;
+        }
         GetComponent<Collider>().material = null;
         Destroy(this);
     }
