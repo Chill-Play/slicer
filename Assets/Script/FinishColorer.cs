@@ -9,6 +9,7 @@ public class FinishColorer : MonoBehaviour
     [SerializeField] Color targetColor;
     [SerializeField] Color sourceColorTarget;
     [SerializeField] Color targetColorTarget;
+    [SerializeField] AnimationCurve animationCurve;
     // Start is called before the first frame update
     void Start()
     {

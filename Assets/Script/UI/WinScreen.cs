@@ -19,28 +19,29 @@ public class WinScreen : MonoBehaviour
         levelCompleteLabel.localScale = Vector3.zero;
         tapToNext.localScale = Vector3.zero;
 
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(levelCompleteLabel.DOScale(1f, 0.4f).SetEase(Ease.OutElastic, 1.3f, 0.3f));
+        sequence.Append(skinIcon.transform.DOScale(1.2f, 0.3f).SetEase(Ease.InOutCirc));
+
         KnifeSkin skin = FindObjectOfType<KnifeStorage>().GetNextSkin();
 
         if (skin != null)
         {
             skinFillProgress.sprite = skin.Icon;
             skinIcon.sprite = skin.IconBack;
+            FindObjectOfType<KnifeStorage>().AddSkinProgress(out float oldProgress, out float newProgress, out bool newSkin);
+            if (newSkin)
+            {
+                newProgress = 1f;
+            }
+            skinFillProgress.fillAmount = oldProgress;
+            sequence.Append(skinFillProgress.DOFillAmount(newProgress, 0.5f).SetEase(Ease.InOutCubic));
         }
         else
         {
             skinIcon.enabled = false;
             skinFillProgress.enabled = false;
         }
-        FindObjectOfType<KnifeStorage>().AddSkinProgress(out float oldProgress, out float newProgress, out bool newSkin);
-        if(newSkin)
-        {
-            newProgress = 1f;
-        }
-        Sequence sequence = DOTween.Sequence();
-        skinFillProgress.fillAmount = oldProgress;
-        sequence.Append(levelCompleteLabel.DOScale(1f, 0.4f).SetEase(Ease.OutElastic, 1.3f, 0.3f));
-        sequence.Append(skinIcon.transform.DOScale(1.2f, 0.3f).SetEase(Ease.InOutCirc));
-        sequence.Append(skinFillProgress.DOFillAmount(newProgress, 0.5f).SetEase(Ease.InOutCubic));
         sequence.Append(skinIcon.transform.DOScale(1f, 0.4f).SetEase(Ease.InOutCirc));
         sequence.Append(tapToNext.transform.DOScale(1f, 0.4f).SetEase(Ease.OutElastic, 1.3f, 0.3f));
     }

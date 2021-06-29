@@ -761,10 +761,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 43249316-8ac0-443a-b115-59f295089787
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Slice Master Surfer
+  organizationId: igor-zverev
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

@@ -67,4 +67,10 @@ public class GameController : MonoBehaviour
         //    OnWin?.Invoke();
         //}
     }
+
+
+    void SetTimeSpeed()
+    {
+
+    }
 }
