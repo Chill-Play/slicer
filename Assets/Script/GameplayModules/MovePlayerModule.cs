@@ -39,6 +39,7 @@ public class MovePlayerModule : GameplayModule
         }
         RoadPointInfo roadPointInfo = road.GetRoadPointInfo(player.transform.position);
         RoadPointInfo cameraRoadPointInfo = road.GetRoadPointInfo(player.transform.position + roadPointInfo.direction * 10f);
+        player.Progress = roadPointInfo.progress;
         player.Move(input - lastInput, roadPointInfo.direction, roadPointInfo.point, road.RoadWidth);
         Object.FindObjectOfType<CameraController>().SetRotation(Quaternion.LookRotation(cameraRoadPointInfo.direction));
         lastInput = input;

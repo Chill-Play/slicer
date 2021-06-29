@@ -14,6 +14,6 @@ public class FinishTargetTester : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(finishTarget.transform.InverseTransformPoint(transform.position));
+
     }
 }

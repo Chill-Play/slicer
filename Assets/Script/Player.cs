@@ -17,6 +17,7 @@ public class Player : Entity<Player>
     [SerializeField] Animator animator;
     [SerializeField] bool rotateWithInput;
     [SerializeField] float additionalGravity;
+
     KnifeSkin skin;
     Vector3 localVelocity;
     Vector3 roadDirection = Vector3.forward;
@@ -28,6 +29,9 @@ public class Player : Entity<Player>
     float currentSpeed;
     float targetSpeed;
     Rigidbody rigidbody;
+
+    public float Progress { get; set; }
+
     // Start is called before the first frame update
     void Start()
     {

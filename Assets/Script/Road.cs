@@ -6,6 +6,7 @@ using UnityEngine;
 public struct RoadPointInfo
 {
     public int index;
+    public float progress;
     public Vector3 point;
     public Vector3 direction;
 }
@@ -70,6 +71,7 @@ public class Road : Entity<Road>
         info.direction = direction.normalized;
         info.point = roadPoints[roadPoint];
         info.index = roadPoint;
+        info.progress = (float)info.index / roadPoints.Count;
         return info;
     }
 
