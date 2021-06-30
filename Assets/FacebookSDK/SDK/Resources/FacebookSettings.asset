@@ -16,9 +16,9 @@ MonoBehaviour:
   clientTokens:
   - 
   appIds:
-  - 0
+  - 1169346383477514
   appLabels:
-  - App Name
+  - Slice Master
   cookie: 1
   logging: 1
   status: 1

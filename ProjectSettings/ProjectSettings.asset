@@ -170,8 +170,8 @@ PlayerSettings:
   applicationIdentifier:
     Android: slice.surfer.sword
   buildNumber: {}
-  AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 19
+  AndroidBundleVersionCode: 2
+  AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -674,7 +674,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    7: APP_METRICA_TRACK_LOCATION_DISABLED
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
