@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7b82b1248c84e468b83ba7fb3f14a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ApiKey: 
+  ApiKey: 715b4621-4fc3-4360-91a5-82d781821f45
   ExceptionsReporting: 1
   SessionTimeoutSec: 300
   LocationTracking: 0
@@ -2632,7 +2632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1565946454139021751}
   finish: {fileID: 0}
-  tutorialMode: 0
+  tutorialMode: 1
   gameStateId: {fileID: 7477332230851142650, guid: 29dbc3a3bf0cef545a89623caf4938b1,
     type: 2}
   winStateId: {fileID: 2514017134219998208, guid: 29dbc3a3bf0cef545a89623caf4938b1,

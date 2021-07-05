@@ -52,9 +52,12 @@ public class AnalyticsManager : MonoBehaviour
     private void OnDisable()
     {
         GameController gameController = FindObjectOfType<GameController>();
-        gameController.OnGameStart -= AnalyticsManager_OnGameStart;
-        gameController.OnLose -= GameController_OnLose;
-        gameController.OnWin -= GameController_OnWin;
+        if (gameController != null)
+        {
+            gameController.OnGameStart -= AnalyticsManager_OnGameStart;
+            gameController.OnLose -= GameController_OnLose;
+            gameController.OnWin -= GameController_OnWin;
+        }
     }
 
 
